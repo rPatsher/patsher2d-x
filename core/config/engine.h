@@ -25,12 +25,16 @@ SOFTWARE.
 #define ENGINE_H
 
 
+#include "core/typedefs.h"
+
 class Engine {
 
 private:
     int fps;
     int p_target;
+    bool hint;
 
+    double p_time;
 
 
 public:
@@ -38,14 +42,15 @@ public:
     int GetFpsTargert(void) const;
 
     void SetFpsTargert(int p_fps);
-    int GetFrameTime(void)const;
-
+    double GetFrameTime(void) const;
 
     bool IsEditorHint(void) const;
+    bool IsHint(void) const;
 
-    
 
-
+public:
+    Engine();
+    ~Engine();
 
 
 

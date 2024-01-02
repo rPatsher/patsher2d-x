@@ -21,39 +21,17 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
+#ifndef TYPEDEFS_H
+#define TYPEDEFS_H
 
-#include "engine.h"
-#include "core/typedefs.h"
+#include <raygui.h>
+#include <rlgl.h>
 
-
-#include <cstdint>
-#include <cstddef>
-
-int Engine::GetEngineFps() const {
-    return GetFPS();
-
-}
-
-int Engine::GetFpsTargert() const {
-    return p_target;
-}
-
-void Engine::SetFpsTargert(int p_fps) {
-    int target = p_fps;
-    SetTargetFPS(target);
-}
-
-bool Engine::IsEditorHint() const {
-    return hint;
-}
-
-double Engine::GetFrameTime() const {
-    return GetTime();
-}
-
-bool Engine::IsHint() const {
-    bool hinted = hint;
-    return hinted;
-}
+#include <raylib.h>
+#include <raymath.h>
 
 
+
+
+
+#endif //
