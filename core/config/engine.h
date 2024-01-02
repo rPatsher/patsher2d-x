@@ -26,17 +26,35 @@ SOFTWARE.
 
 
 #include "core/typedefs.h"
+#include <alsa/control.h>
+
+#include <cstdlib>
+#include <csignal>
+#include <list>
+#include <list.h>
+
+#include <string>
+
+
+struct Signleton {
+    char* object;
+    int* count;
+    void* item;
+};
 
 class Engine {
+
 
 private:
     int fps;
     int p_target;
     bool hint;
+    std::list<std::string>* p_list;
 
     double p_time;
 
-
+public:
+    static Engine* GetSignleton();
 public:
     int GetEngineFps(void) const;
     int GetFpsTargert(void) const;
@@ -47,14 +65,14 @@ public:
     bool IsEditorHint(void) const;
     bool IsHint(void) const;
 
+    void SetPropertyList(const std::list<std::string>* p_list) const;
+    std::list<std::string> GetPropertyList(void) const;
+
 
 public:
     Engine();
     ~Engine();
 
-
-
-    
 };
 
 

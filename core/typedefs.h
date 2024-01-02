@@ -30,6 +30,57 @@ SOFTWARE.
 #include <raylib.h>
 #include <raymath.h>
 
+class ClassDB;
+
+/**
+ * The `RPTAPI` macro is a platform-dependent conditional declaration in C++.
+ * Its purpose is to facilitate the creation of code that behaves differently
+ * based on the target platform during compilation. It allows developers to
+ * define functions, variables, or symbols with specific linkage or behavior
+ * depending on the operating system or platform being compiled for.
+ * 
+ * By utilizing conditional compilation directives (`#ifdef`, `#elif`, etc.),
+ * `RPTAPI` enables developers to create code that seamlessly adapts to various
+ * platforms such as Windows, Linux, web (Emscripten), or Android. This macro
+ * serves as a switch, enabling the appropriate linkage specifications or
+ * platform-specific definitions based on the environment in which the code is
+ * being compiled.
+ * 
+ * For instance, it can be configured to handle exporting or importing symbols
+ * in DLLs for Windows, use default external linkage for object files on Linux,
+ * and exclude definitions for Android and web platforms. The macro allows for
+ * a modular and adaptable codebase, ensuring proper functionality across diverse
+ * platforms without needing separate codebases for each environment.
+ * 
+ * Developers can define and use `RPTAPI` in header files to declare functions,
+ * variables, or symbols, and then provide platform-specific implementations in
+ * separate files, tailored to each platform's requirements. This approach enables
+ * the creation of platform-agnostic code while accommodating platform-specific
+ * functionality when necessary.
+ */
+
+#include <csignal>
+#include <string>
+#include <vector>
+#include <map>
+
+#if defined(_WIN32)
+  #ifdef RPTAPI_EXPORTS
+    #define RPTAPI extern "C" __declspec(dllexport)
+  #else
+    #define RPTAPI extern "C" __declspec(dllimport)
+  #endif
+#elif defined(__linux__)
+  #define RPTAPI extern "C"
+#elif defined(__EMSCRIPTEN__)
+  #define RPTAPI extern "C"
+  #define WEB_PLATFORM_AVAILABLE
+#elif defined(__ANDROID__)
+  #define RPTAPI extern "C"
+  #define ANDROID_PLATFORM_AVAILABLE
+#else
+  #error Unsupported platform
+#endif
 
 
 

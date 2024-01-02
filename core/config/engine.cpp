@@ -56,4 +56,23 @@ bool Engine::IsHint() const {
     return hinted;
 }
 
+void Engine::SetPropertyList(const std::list<std::string>* p_list) const {
+    p_list = list;
+    p_list->push_back("p_list");
+    p_list->push_back("hint");
+    p_list->push_back("fps");
+    p_list->push_back("p_fps");
+
+    std::vector<std::string>* vec;
+    vec->push_back(p_list);
+}
+
+std::list<std::string> GetPropertyList() const {
+    return p_list;
+}
+
+
+Engine::Engine() {}
+Engine::~Engine() {}
+
 
