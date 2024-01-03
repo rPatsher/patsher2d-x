@@ -32,6 +32,11 @@ SOFTWARE.
 
 class ClassDB;
 
+// Macro to begin a namespace block
+#define RPT_NAMESPACE_BEGIN namespace {
+// Macro to end a namespace block
+#define RPT_NAMESPACE_BEGIN }
+
 /**
  * The `RPTAPI` macro is a platform-dependent conditional declaration in C++.
  * Its purpose is to facilitate the creation of code that behaves differently

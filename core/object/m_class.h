@@ -31,26 +31,84 @@ SOFTWARE.
 
 #include <map>
 #include <string>
-
+#include <vector>
 #include <cstdio>
 #include <cstdlib>
+#include <assert.h>
+#include <list>
 
 #include "core/typedefs.h"
+#include <c-logger/src/logger.h> // FOR LOG_INFO()
+#include <c-logger/src/loggerconf.h>
+#include "core/object/ref_counted.h"
+#include "core/templates/hash_map.h"
+#include "core/templates/list.h"
+#include "core/templates/map.h"
+#include "core/error/error_list.h"
+#include "core/error/error_macros.h"
+
+template <typename T>
+class List;
+
+class PropertyUtils;
+
+struct MethodInfo {
+    std::string name;
+    uint32_t flags;
+    int id = 0;
+    Ref<std::list<PropertyUtils>> args;
+    std::vector<int> meta_data;
+    Map<MethodInfo, void*> map;
+
+    int get_argument_meta(int p_arg) const { 
+        if (p_arg == -1) {
+            return;
+        }
+        return meta_data.size() > p_arg ? meta_data[p_arg] : 0;
+    }
+    inline bool operator==(const MethodInfo &p_method) const { return id == p_method.id && name == p_method.name; }
+    inline bool operator<(const MethodInfo &p_method) const { return id == p_method.id ? (name < p_method.name) : (id < p_method.id); }
+
+    MethodInfo(const std::string& p_name) { name = p_name; }
+    template <class VarArgs>
+    MethodInfo(const PropertyUtils& p_args , const std::string& p_name, VarArgs p_prms) {
+        args = p_args;
+        name = p_name;
+        _push_params(p_prms...);
+    }
+    MethodInfo(const PropertyUtils& p_args , const std::string& p_name) {
+        name = p_name;
+    }
+
+    template <typename VarArgs>
+    MethodInfo(const std::string& p_name , VarArgs p_prms) {
+        name  = p_prms;
+        _push_params(p_prms...);
+    }
+
+    void _push_params(const PropertyUtils &p_param) {
+		args->push_back(p_param);
+	}
+
+};
 
 class MClass {
 
+
 private: 
-    std::map<std::string , std::string> m_map;
-    std::map<std::string, std::map<std::string, std::string>> ptr_class; 
-    std::map<std::string, std::map<std::string, std::vector<std::string>>> array_class; // Map of class array properties and default values
-    std::map<std::string, std::vector<std::string>> p_property;
-    std::map<std::string, std::map<std::string, std::vector<std::string>>> mcls_ptr; // Map of class array properties and default values
+    Map<std::string , std::string> m_map;
+    Map<std::string, void*> item;
+    Map<std::string, std::string> m_it;
+    Map<std::string, std::map<std::string, std::string>> ptr_class; 
+    Map<std::string, std::map<std::string, std::vector<std::string>>> array_class; // Map of class array properties and default values
+    Map<std::string, std::vector<std::string>> p_property;
+    Map<std::string, std::map<std::string, std::vector<std::string>>> mcls_ptr; // Map of class array properties and default values
     
 
 
 
 
-    static MClass* signelton;
+    static MClass* get_signleton();
 
 
 #define MCLASS_API
@@ -80,6 +138,7 @@ public: \
     std::vector<std::string> get_class_static_ptr() { \
     return p_vec; \
     } \ 
+    static std::string get_saved_class() { return #m_class; } \
     m_inshit::get_class_name() \
     std::string get_class_name(const std::string& p_str) { \
         get_class_name(m_class); \
@@ -96,12 +155,12 @@ public: \
             return 0; \
         } /
 
-
-public:
+#define OBJ_SAVE_TYPE(m_class) 
+public: 
     void add_property(const std::string& m_class, const std::string& name, const std::string& value);
     std::string get_property(const std::string& m_class, const std::string& name) const;
 
-    std::map<std::string, std::string> get_class_properties(const std::string& m_class) const;
+    Map<std::string, std::string> get_class_properties(const std::string& m_class) const;
     
 
 #define ADD_PROPERTY(m_type , m_name , m_method) \
