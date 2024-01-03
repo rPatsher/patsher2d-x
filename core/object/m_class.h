@@ -38,14 +38,15 @@ SOFTWARE.
 #include <list>
 
 #include "core/typedefs.h"
-#include <c-logger/src/logger.h> // FOR LOG_INFO()
-#include <c-logger/src/loggerconf.h>
 #include "core/object/ref_counted.h"
 #include "core/templates/hash_map.h"
 #include "core/templates/list.h"
 #include "core/templates/map.h"
 #include "core/error/error_list.h"
 #include "core/error/error_macros.h"
+
+
+#include "thirdparty/logger/src/logger.h"
 
 template <typename T>
 class List;
