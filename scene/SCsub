@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+
+Import("env")
+
+env.scene_sources = []
+
+# Patsher source files
+env.add_source_files(env.scene_sources, "*.cpp")
+
+
+# Build it all as a library
+lib = env.add_library("scene", env.scene_sources)
+env.Prepend(LIBS=[lib])
