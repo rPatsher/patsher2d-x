@@ -21,9 +21,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-
-
-
 #ifndef M_CLASS_H
 #define M_CLASS_H
 
@@ -35,7 +32,7 @@ SOFTWARE.
 #include <cstdio>
 #include <cstdlib>
 #include <assert.h>
-#include <list>
+
 
 #include "core/typedefs.h"
 #include "core/object/ref_counted.h"
@@ -47,6 +44,10 @@ SOFTWARE.
 
 
 #include "thirdparty/logger/src/logger.h"
+#include "thirdparty/logger/src/loggerconf.h"
+
+
+
 
 template <typename T>
 class List;
@@ -98,18 +99,24 @@ class MClass {
 
 private: 
     Map<std::string , std::string> m_map;
-    Map<std::string, void*> item;
-    Map<std::string, std::string> m_it;
     Map<std::string, std::map<std::string, std::string>> ptr_class; 
     Map<std::string, std::map<std::string, std::vector<std::string>>> array_class; // Map of class array properties and default values
     Map<std::string, std::vector<std::string>> p_property;
     Map<std::string, std::map<std::string, std::vector<std::string>>> mcls_ptr; // Map of class array properties and default values
-    
+    Map<std::string, void*> m_cls;
+    Map<std::string , std::map<std::string, int>> p_dir;
+    Map<std::string , std::vector<std::string>> m_items;
+    static MClass* m_sign;
+public:
 
 
-
-
-    static MClass* get_signleton();
+    static MClass* get_signleton()  {
+        if (!m_sign) {
+            m_sign = new ClassDB();
+        }
+        return m_sign;
+        
+    }
 
 
 #define MCLASS_API
@@ -149,27 +156,76 @@ public: \
             return dynamic_cast<T*>(this); \
         } \
     int get_dictionary_index_value(const std::string& key) const { \
-            auto keyIter = classDictionary[#m_class].find(key); \
-            if (keyIter != classDictionary[#m_class].end()) { \
+            auto keyIter = p_dir[#m_class].find(key); \
+            if (keyIter != p_dir[#m_class].end()) { \
                 return keyIter->second; \
             } \
             return 0; \
+            m_inshit::get_ptr() const {} \
+            m_inshit* get_ptr() const { \
+                return static_cast<m_inshit*>(this);\
+            } \
         } /
 
-#define OBJ_SAVE_TYPE(m_class) 
+#define OBJ_SAVE_TYPE(m_class) \
+    ::MClass::save_type(#m_class, #m_class);
 public: 
     void add_property(const std::string& m_class, const std::string& name, const std::string& value);
     std::string get_property(const std::string& m_class, const std::string& name) const;
 
     Map<std::string, std::string> get_class_properties(const std::string& m_class) const;
-    
+    void add_dictionary_value(const std::string& className, const std::string& key, int value);
+    int get_dictionary_index_value(const std::string& className, const std::string& key) const;
+
+    void add_array_property_with_default(const std::string& className, const std::string& propertyName, const std::vector<std::string>& defaultValue);
+    std::string get_default_property_value(const std::string& className, const std::string& propertyName) const;
+
+
+    void save_type(const std::string& className, const std::string& typeName);
+
+
+
+    template<typename T>
+    void register_class(const std::string& name) {
+        m_cls[name] = p_cls;
+    }
+
+    template<typename T>
+    Ref<T>* get_class(const std::string& name) {
+        auto it = m_cls.find(name);
+        if (it != m_cls.end()) {
+            return static_cast<Ref<T>*>(it->second);
+        }
+        return nullptr;
+    }
+
 
 #define ADD_PROPERTY(m_type , m_name , m_method) \
     MClass::add_property(m_type , m_name , m_method) 
 
+#define MCLASSDB(m_class) \
+    ::MClass::get_signleton()->register_class<m_class>();
 
+#define BIND_ENUM(type, enumValue) \
+    type::enumValue
+
+
+
+public:
+    ClassDB() {}
+    ~ClassDB() {}
+
+protected:
+    friend class Object;
 };
 
+/**
+ *  save a MClass object on MClass map type
+ * `MCLASSDB` macro to saved the class to map 
+*/
+
+OBJ_SAVE_TYPE(MClass);
+MCLASSDB(MClass);
 
 
 
