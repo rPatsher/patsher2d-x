@@ -25,9 +25,23 @@ SOFTWARE.
 #ifndef REGISTER_CORE_TYPES_H
 #define REGISTER_CORE_TYPES_H
 
+#include <core/config/engine.h>
+#include <core/config/project_settings.h>
+#include <core/object/ref_counted.h>
+#include <core/object/m_class.h>
+#include <core/string/cstring.h>
+#include <core/string/string.h>
+#include <core/event/event_mouse_button.h>
 
 
 
+
+
+
+
+
+void register_core_utils() {}
+void unregister_core_utils() {}
 
 
 #endif 

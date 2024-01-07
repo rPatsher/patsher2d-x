@@ -41,16 +41,16 @@ SOFTWARE.
 #include "core/templates/map.h"
 #include "core/error/error_list.h"
 #include "core/error/error_macros.h"
+#include "core/string/string.h"
 
-
+#include "core/templates/vector.h"
 #include "thirdparty/logger/src/logger.h"
 #include "thirdparty/logger/src/loggerconf.h"
 
 
+#define DEBUG_TOOLS 
 
 
-template <typename T>
-class List;
 
 class PropertyUtils;
 
@@ -112,12 +112,18 @@ public:
 
     static MClass* get_signleton()  {
         if (!m_sign) {
-            m_sign = new ClassDB();
+            m_sign = nullptr;
         }
         return m_sign;
         
     }
-
+    enum APIType {
+		API_CORE,
+		API_EDITOR,
+		API_EXTENSION,
+		API_EDITOR_EXTENSION,
+		API_NONE
+	};
 
 #define MCLASS_API
 
@@ -180,14 +186,57 @@ public:
     void add_array_property_with_default(const std::string& className, const std::string& propertyName, const std::vector<std::string>& defaultValue);
     std::string get_default_property_value(const std::string& className, const std::string& propertyName) const;
 
+    bool is_class_enabled() const;
+public:
+    struct MethodDef {
+        String name;
+        Vector<String> p_args;
+        MethodDef() {}
+        MethodDef(const char* s) :
+            name(s) {}
+        MethodDef(const String &p_name)
+            {}
+
+    };
+    struct MClassInfo {
+        APIType api = API_NONE;
+        MClassInfo* ptr = nullptr;
+        void* class_ptr = nullptr;
+
+        bool disabled = false;
+		bool exposed = false;
+		bool reloadable = false;
+		bool is_virtual = false;
+
+        List<MethodDef , MClassInfo>* p_ref;
+        List<String, Vector<void*>>* vec;
+        Vector<PropertyUtils> ptr;
+
+        MClassInfo() {}
+        ~MClassInfo() {}
+
+
+
+
+    };
+
+
+    struct PropertySetGet {
+        int index;
+        String setter;
+        String getter;
+    };
 
     void save_type(const std::string& className, const std::string& typeName);
 
 
 
     template<typename T>
-    void register_class(const std::string& name) {
-        m_cls[name] = p_cls;
+    void register_class(bool p_bool =false) {
+        MClassInfo* it = T::get_class();
+        it->exposed = true;
+        it->is_virtual = p_bool;
+        it->api = NULL;
     }
 
     template<typename T>
@@ -204,28 +253,21 @@ public:
     MClass::add_property(m_type , m_name , m_method) 
 
 #define MCLASSDB(m_class) \
-    ::MClass::get_signleton()->register_class<m_class>();
-
+    if (MClass::is_class_enabled) { \
+        ::MClass::register_class<m_class>(true); \
+    }
 #define BIND_ENUM(type, enumValue) \
     type::enumValue
 
 
 
 public:
-    ClassDB() {}
-    ~ClassDB() {}
+    MClass() {}
+    ~MClass() {}
 
 protected:
     friend class Object;
 };
-
-/**
- *  save a MClass object on MClass map type
- * `MCLASSDB` macro to saved the class to map 
-*/
-
-OBJ_SAVE_TYPE(MClass);
-MCLASSDB(MClass);
 
 
 

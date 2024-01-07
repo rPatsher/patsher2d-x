@@ -2,6 +2,16 @@
 #include "cstring.h"
 #include <cstring>
 
+
+#include <cstdio>
+#include <cstdlib>
+#include <strings.h>
+#include <regex>
+#include <algorithm>
+#include <sstream>
+
+#include <map>
+#include <call/json.h>
 // Constructor
 CString::CString() {
     str = new char[1];

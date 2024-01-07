@@ -25,8 +25,7 @@ SOFTWARE.
 #ifndef DICTIONARY_H
 #define DICTIONARY_H
 
-#include <c-logger/src/logger.h>
-
+#include <thirdparty/logger/src/logger.h>
 #include <unordered_map>
 #include <string>
 #include <vector>
