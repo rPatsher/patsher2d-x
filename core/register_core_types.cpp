@@ -29,4 +29,6 @@ SOFTWARE.
 void register_core_utils() {
     MCLASSDB(Engine);
     MCLASSDB(ProjectSettings);
+    MCLASSDB(String);
+
 }

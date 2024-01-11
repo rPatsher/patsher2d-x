@@ -25,7 +25,6 @@ SOFTWARE.
 #define M_CLASS_H
 
 
-
 #include <map>
 #include <string>
 #include <vector>
@@ -60,7 +59,9 @@ struct MethodInfo {
     int id = 0;
     Ref<std::list<PropertyUtils>> args;
     std::vector<int> meta_data;
+    Vector<int> meta;
     Map<MethodInfo, void*> map;
+    
 
     int get_argument_meta(int p_arg) const { 
         if (p_arg == -1) {
@@ -153,9 +154,9 @@ public: \
     return p_vec; \
     } \ 
     static std::string get_saved_class() { return #m_class; } \
-    m_inshit::get_class_name() \
-    std::string get_class_name(const std::string& p_str) { \
-        get_class_name(m_class); \
+    m_inshit::get_class_names() { return } \
+        std::string get_class_name(const std::string& p_str) { \
+        get_class_name(p_str); \
     }\
     template <typename T> \
         T* get_extension_class() const { \
@@ -167,15 +168,15 @@ public: \
                 return keyIter->second; \
             } \
             return 0; \
-            m_inshit::get_ptr() const {} \
-            m_inshit* get_ptr() const { \
-                return static_cast<m_inshit*>(this);\
-            } \
-        } /
+            
+        } \
+        m_inshit::get_ptr() const { return m_inshit; } \
+        void save_class() { MClass::register_class<m_class>(true);} /
 
 #define OBJ_SAVE_TYPE(m_class) \
-    ::MClass::save_type(#m_class, #m_class);
+    ::MClass::save_type(#m_class, #m_class); \
 public: 
+    MClass* obj;
     void add_property(const std::string& m_class, const std::string& name, const std::string& value);
     std::string get_property(const std::string& m_class, const std::string& name) const;
 
@@ -232,11 +233,22 @@ public:
 
 
     template<typename T>
-    void register_class(bool p_bool =false) {
+    static void register_class(bool p_bool =false) {
+        T::initialize_class();
         MClassInfo* it = T::get_class();
         it->exposed = true;
         it->is_virtual = p_bool;
         it->api = NULL;
+        it = m_cls.find(NULL , p_bool);
+        m_cls[T] = m_cls;
+        m_cls.push_back(T, p_bool);
+        if (!m_cls) {
+            register_class<T>(it->is_virtaul);
+            return static_cast<T>(it->second);
+        }
+
+        T::register_custom_data_to_otdb();
+
     }
 
     template<typename T>
@@ -247,14 +259,14 @@ public:
         }
         return nullptr;
     }
-
+#define D_METHOD(m_c, ...) m_c
 
 #define ADD_PROPERTY(m_type , m_name , m_method) \
     MClass::add_property(m_type , m_name , m_method) 
 
 #define MCLASSDB(m_class) \
-    if (MClass::is_class_enabled) { \
-        ::MClass::register_class<m_class>(true); \
+    if (m_class::_is_class_enabled) { \
+        MClass::register_class<m_class>();\
     }
 #define BIND_ENUM(type, enumValue) \
     type::enumValue

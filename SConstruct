@@ -9,8 +9,86 @@ from types import ModuleType
 from collections import OrderedDict
 from importlib.util import spec_from_file_location, module_from_spec
 
+from SCons.Script import Environment , Repository, Export
+from glob import glob
 # Env
 env = Environment()
+
+# Include core sources
+
+env_core = [
+    "core/config/engine.cpp",
+    "core/config/project_settings.cpp",
+    "core/error/error_list.cpp",
+    "core/error/error_macros.cpp",
+    "core/debugger/engine_debugger.cpp",
+    "core/debugger/script_debugger.cpp",
+    "core/string/string.cpp",
+    "core/string/print_string.cpp",
+    "core/string/cstring.cpp",
+    "core/string/string_buffer.cpp",
+    "core/string/string_builder.cpp",
+    "core/input/input.cpp",
+    "core/input/input_map.cpp",
+    "core/input/input_list.cpp",
+    "core/input/input_game_pad.cpp",
+    "core/math/geometry_2d.cpp",
+    "core/math/geometry_3d.cpp",
+    "core/math/color.cpp",
+    "core/math/projection.cpp",
+    "core/math/aabb.cpp",
+    "core/math/face3.cpp",
+    "core/math/math_func.cpp",
+    "core/math/size2i.cpp",
+    "core/math/rect2i.cpp",
+    "core/math/transform_2d.cpp",
+    "core/math/transform_3d.cpp",
+    "core/math/vector2.cpp",
+    "core/math/vector3.cpp",
+    "core/math/vector4.cpp",
+    "core/version.gen.h"
+
+]
+
+# Env thidrparty sources
+env_thirdparty = [
+    "libgl/raylib.h"
+    "libgl/rcore.c",
+    "libgl/rglfw.c",
+    "libgl/rgl.h",
+    "libgl/utils.c",
+    "libgl/utils.h",
+    "libgl/config.h",
+    "libgl/rcamera.h",
+    "libgl/platforms/rcore_android.c",
+    "libgl/platforms/rcore_desktop_sdl.c",
+    "libgl/platforms/rcore_web.c",
+    "rcore_template.c",
+    "rcore_dm.c",
+    "libgui/raygui.h",
+    "libjson/common.h",
+    "libjson/json.h",
+    "libgl/util.h",
+    "libjson/src/json.c",
+    "libjson/call/json.h",
+    "libjson/impl/json.h",
+    "libjson/impl/impl_objmap.h",
+    "libjson/impl/impl_mem.h"
+
+
+]
+
+# Env Main
+env_main = [
+    "main/main.cpp",
+    "main/main_toolbar.cpp",
+    "main/main_timer.cpp",
+    "main_splash_screen.cpp"
+]
+
+
+
+
 
 # Global Ps = ["default"]
 platform_arg = ARGUMENTS.get("platform", ARGUMENTS.get("p", False))
@@ -31,42 +109,22 @@ base_env = Environment(CPPPATH=['/usr/include'], CC='gcc')
 
 customs = ["custom.py"]
 
-# Build Platform
-def _build_platform() -> None:
-	# Modify settings specific to each platform
-	env_windows.Append(CPPFLAGS=['-DWINDOWS'])
-	env_linuxbsd.Append(CPPFLAGS=['-DLINUX_BSD'])
-	env_macos.Append(CPPFLAGS=['-DMACOS'])
-	env_android.Append(CPPFLAGS=['-DANDROID'])
-	
-	selected_platform = ""
-	
-	if env_base["platform"] != "":
-		selected_platform = env_base["platform"]
-	elif env_base["p"] != "":
-		selected_platform = env_base["p"]
-	else:
-    # Missing `platform` argument, try to detect platform automatically
-	if (
-	sys.platform.startswith("linux")
-        or sys.platform.startswith("dragonfly")
-        or sys.platform.startswith("freebsd")
-        or sys.platform.startswith("netbsd")
-        or sys.platform.startswith("openbsd")
-    ):
-        selected_platform = "linuxbsd"
-    elif sys.platform == "darwin":
-        selected_platform = "macos"
-    elif sys.platform == "win32":
-        selected_platform = "windows"
-    else:
-        print("Could not detect platform automatically. Supported platforms:")
-        for x in platform_list:
-            print("\t" + x)
-        print("\nPlease run SCons again and select a valid platform: platform=<string>")
+opts = Variables(customs, ARGUMENTS)
 
-    if selected_platform != "":
-        print("Automatically detected platform: " + selected_platform)
+# Build Platform
+
+
+# Platform specific settings
+if platform_arg in libs:
+    env = Environment(CXX='g++', CXXFLAGS=['-Wall', '-O2'], LIBS=libs[platform_arg])
+else:
+    print(f"Unsupported platform: {platform_arg}")
+    print("Supported platforms: Windows, Linux, Darwin (MacOS), Android")
+    sys.exit(1)
+
+# Compiler platform
+# Set compiler and compiler flags based on platform argument or default to the current system
+platform_arg = sys.argv[1] if len(sys.argv) > 1 else platform.system()
 
 # Add platform-specific libraries
 env_windows.Append(LIBS=['wsock32', 'advapi32'])
@@ -99,7 +157,7 @@ opts.Add("LINKFLAGS", "Custom flags for the linker")
 
 # Include Dir
 Repository('/core')
-Repository(/'editor')
+Repository('/editor')
 Repository('/scene')
 Repository('/server')
 Repository('/doc')
@@ -112,17 +170,19 @@ Repository('/tests')
 
 # Include other
 
-Repository(/'usr/')
+Repository('/usr/')
 Repository('/usr/include/')
 Repository('/usr/bin/')
 Repository('/usr/lib/')
 
-# Include SCsub files
-SConsript('core/SCsub')
-SConsript('editor/SCsub')
-SConsript('modules/SCsub')
-SConsript('scene/SCsub')
-SConsript('resources/SCsub')
-SConsript('servers/SCsub')
-SConsript('thirdparty/SCsub')
-Export("env")
+# Create a build directory if it doesn't exist
+VariantDir('build', '.')
+
+# Compile source files
+objects = [env.Object('build/' + src.replace('.cpp', '.o'), src) for src in source_files]
+
+# Build program
+env.Program('config', objects)
+
+
+Export('env')

@@ -33,9 +33,28 @@ SOFTWARE.
 class ClassDB;
 
 // Macro to begin a namespace block
-#define RPT_NAMESPACE_BEGIN namespace {
+#define RPT_NAMESPACE_BEGIN namespace patsher {
+#define RPT_NAMESPACE_END }
+
 // Macro to end a namespace block
-#define RPT_NAMESPACE_BEGIN }
+#if defined(_WIN32)
+    #if defined(__TINYC__)
+        #define __declspec(x) __attribute__((x))
+    #endif
+    #if defined(BUILD_LIBTYPE_SHARED)
+        #define RPTAPI __declspec(dllexport)     // We are building the library as a Win32 shared library (.dll)
+    #elif defined(USE_LIBTYPE_SHARED)
+        #define RPTAPI __declspec(dllimport)     // We are using the library as a Win32 shared library (.dll)
+    #endif
+#else
+    #if defined(BUILD_LIBTYPE_SHARED)
+        #define RPTAPI __attribute__((visibility("default"))) // We are building as a Unix shared library (.so/.dylib)
+    #endif
+#endif
+
+#ifndef RPTAPI
+    #define RPTAPI       // Functions defined as 'extern' by default (implicit specifiers)
+#endif
 
 /**
  * The `RPTAPI` macro is a platform-dependent conditional declaration in C++.
@@ -68,27 +87,6 @@ class ClassDB;
 #include <string>
 #include <vector>
 #include <map>
-
-#if defined(_WIN32)
-  #ifdef RPTAPI_EXPORTS
-    #define RPTAPI extern "C" __declspec(dllexport)
-  #else
-    #define RPTAPI extern "C" __declspec(dllimport)
-  #endif
-#elif defined(__linux__)
-  #define RPTAPI extern "C"
-#elif defined(__EMSCRIPTEN__)
-  #define RPTAPI extern "C"
-  #define WEB_PLATFORM_AVAILABLE
-#elif defined(__ANDROID__)
-  #define RPTAPI extern "C"
-  #define ANDROID_PLATFORM_AVAILABLE
-#else
-  #error Unsupported platform
-#endif
-
-
-
 
 
 #include <glfw/include/GLFW/glfw3.h>

@@ -50,11 +50,15 @@ public:
     bool operator==(const String& p_str) const;
     bool operator!=(const String& p_str) const;
 
+    bool operator=(const String& p_str) const;
     String operator+(const String& p_str) const;
     String operator+(char32_t p_char) const;
 
     signed char naturalcasecmp_to(const String& p_str) const;
     signed char naturalnocasecmp_to(const String& p_str) const;
+
+    bool _is_class_enabled() const;
+
 
     signed char casecmp_to(const String& p_str) const;
     signed char nocasecmp_to(const String& p_str) const;

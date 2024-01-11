@@ -57,7 +57,6 @@ bool Engine::IsHint() const {
 }
 
 void Engine::SetPropertyList(const std::list<std::string>* p_list) const {
-    p_list = list;
     p_list->push_back("p_list");
     p_list->push_back("hint");
     p_list->push_back("fps");
@@ -70,6 +69,8 @@ void Engine::SetPropertyList(const std::list<std::string>* p_list) const {
 std::list<std::string> GetPropertyList() const {
     return p_list;
 }
+
+
 
 
 Engine::Engine() {}

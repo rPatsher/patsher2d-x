@@ -35,11 +35,15 @@ SOFTWARE.
 
 #include <string>
 
+#include <core/string/string.h>
+#include <core/object/object_db.h>
+
 
 struct Signleton {
     char* object;
     int* count;
     void* item;
+    String name;
 };
 
 class Engine {
@@ -50,11 +54,11 @@ private:
     int p_target;
     bool hint;
     std::list<std::string>* p_list;
-
+    double p_sec;
     double p_time;
 
 public:
-    static Engine* GetSignleton();
+    static Engine* get_signleton();
 public:
     int GetEngineFps(void) const;
     int GetFpsTargert(void) const;
@@ -65,9 +69,22 @@ public:
     bool IsEditorHint(void) const;
     bool IsHint(void) const;
 
+    bool _is_class_enabled() const;
+
+    void wiat_time(double seconds);
+    void swap_screen_buffer();
+    void set_randoom_seed(unsigned int seed);
+
+    void set_randoom_value(int min , int max);
+
+
+
     void SetPropertyList(const std::list<std::string>* p_list) const;
     std::list<std::string> GetPropertyList(void) const;
-
+protected:
+    static void bind_methods();
+    friend class ProjectSettings;
+    friend class Main;
 
 public:
     Engine();
