@@ -1,6 +1,6 @@
 # rPT Game Engine
 
-The rPT game engine is a versatile and user-friendly open-source platform designed to cater to game developers of all levels. Its intuitive editor and robust features make it an ideal choice for creating both 2D and 3D games across various platforms.
+The Patsher2D-X game engine is a versatile and user-friendly open-source platform designed to cater to game developers of all levels. Its intuitive editor and robust features make it an ideal choice for creating both 2D and 3D games across various platforms.
 
 ## Features
 
@@ -38,4 +38,4 @@ The rPT game engine is a versatile and user-friendly open-source platform design
 
 ## Conclusion
 
-The rPT game engine stands as a versatile and accessible open-source game development tool, offering a unified editor, support for both 2D and 3D game creation, a range of essential tools, and a robust plugin system. Its openness and feature-rich environment make it an excellent choice for developers aiming to create captivating games with ease.
+The Patsher2D-X game engine stands as a versatile and accessible open-source game development tool, offering a unified editor, support for both 2D and 3D game creation, a range of essential tools, and a robust plugin system. Its openness and feature-rich environment make it an excellent choice for developers aiming to create captivating games with ease.
