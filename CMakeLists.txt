@@ -38,3 +38,12 @@ include(main/CMakeLists.txt)
 
 # Targert Link Libs
 
+include(FetchContent)
+if (NOT raylib_FOUND)
+    FetchContent_Declare(
+        raylib
+        URL https://github.com/raysan5/raylib/archive/refs/tags/5.0.tar.gz
+    )
+    FetchContent_MakeAvailable(raylib)
+endif()
+set(BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
