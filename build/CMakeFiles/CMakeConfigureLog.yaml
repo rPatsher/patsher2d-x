@@ -1,0 +1,3474 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake:211 (message)"
+      - "CMakeLists.txt"
+    message: |
+      The system is: Linux - 6.2.1-PRoot-Distro - armv8l
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/arm-linux-gnueabihf-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/3.27.4/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --c++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--c++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --ec++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--ec++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-bclib'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--target=arm-arm-none-eabi'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-merge=arm-arm-none-eabi'?
+      bcc: Unknown command line argument '-mcpu=cortex-m3'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-mlsm=cortex-m3'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      bcc: Unknown command line argument '-I__does_not_exist__'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-dfsan-abilist'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --c++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--c++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --ec++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--ec++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-bclib'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--target=arm-arm-none-eabi'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-merge=arm-arm-none-eabi'?
+      bcc: Unknown command line argument '-mcpu=cortex-m3'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-mlsm=cortex-m3'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      bcc: Unknown command line argument '-I__does_not_exist__'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-dfsan-abilist'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1117 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt"
+    message: |
+      Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+      bcc: Not enough positional command line arguments specified!
+      Must specify at least 1 positional arguments: See: /system/bin/bcc -help
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1117 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt"
+    message: |
+      Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+      bcc: Not enough positional command line arguments specified!
+      Must specify at least 1 positional arguments: See: /system/bin/bcc -help
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-uLRBB2"
+      binary: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-uLRBB2"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-uLRBB2'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_6fcb1/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_6fcb1.dir/build.make CMakeFiles/cmTC_6fcb1.dir/build
+        gmake[1]: Entering directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-uLRBB2'
+        Building C object CMakeFiles/cmTC_6fcb1.dir/CMakeCCompilerABI.c.o
+        /usr/bin/arm-linux-gnueabihf-gcc   -v -o CMakeFiles/cmTC_6fcb1.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.27/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/arm-linux-gnueabihf-gcc
+        Target: arm-linux-gnueabihf
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.2.0-4ubuntu3' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv7-a+fp --with-float=hard --with-mode=thumb --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.2.0 (Ubuntu 13.2.0-4ubuntu3) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6fcb1.dir/CMakeCCompilerABI.c.o' '-c'  '-mfloat-abi=hard' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+fp' '-march=armv7-a+fp' '-dumpdir' 'CMakeFiles/cmTC_6fcb1.dir/'
+         /usr/libexec/gcc/arm-linux-gnueabihf/13/cc1 -quiet -v -imultilib . -imultiarch arm-linux-gnueabihf /usr/share/cmake-3.27/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_6fcb1.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mfloat-abi=hard -mtls-dialect=gnu -mthumb -mlibarch=armv7-a+fp -march=armv7-a+fp -version -fstack-protector-strong -Wformat -Wformat-security -o /tmp/ccoOCFkL.s
+        GNU C17 (Ubuntu 13.2.0-4ubuntu3) version 13.2.0 (arm-linux-gnueabihf)
+        	compiled by GNU C version 13.2.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/local/include/arm-linux-gnueabihf"
+        ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/13/include-fixed/arm-linux-gnueabihf"
+        ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/13/include-fixed"
+        ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/13/../../../../arm-linux-gnueabihf/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/lib/gcc/arm-linux-gnueabihf/13/include
+         /usr/local/include
+         /usr/include/arm-linux-gnueabihf
+         /usr/include
+        End of search list.
+        Compiler executable checksum: 47b604f9e0218af7a26354775c1bfeaa
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6fcb1.dir/CMakeCCompilerABI.c.o' '-c'  '-mfloat-abi=hard' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+fp' '-march=armv7-a+fp' '-dumpdir' 'CMakeFiles/cmTC_6fcb1.dir/'
+         as -v -march=armv7-a+fp -mfloat-abi=hard -meabi=5 -o CMakeFiles/cmTC_6fcb1.dir/CMakeCCompilerABI.c.o /tmp/ccoOCFkL.s
+        GNU assembler version 2.41 (arm-linux-gnueabihf) using BFD version (GNU Binutils for Ubuntu) 2.41
+        COMPILER_PATH=/usr/libexec/gcc/arm-linux-gnueabihf/13/:/usr/libexec/gcc/arm-linux-gnueabihf/13/:/usr/libexec/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/13/:/usr/lib/gcc/arm-linux-gnueabihf/
+        LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/13/:/usr/lib/gcc/arm-linux-gnueabihf/13/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/13/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6fcb1.dir/CMakeCCompilerABI.c.o' '-c'  '-mfloat-abi=hard' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+fp' '-march=armv7-a+fp' '-dumpdir' 'CMakeFiles/cmTC_6fcb1.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_6fcb1
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6fcb1.dir/link.txt --verbose=1
+        /usr/bin/arm-linux-gnueabihf-gcc  -v -rdynamic CMakeFiles/cmTC_6fcb1.dir/CMakeCCompilerABI.c.o -o cmTC_6fcb1 
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/arm-linux-gnueabihf-gcc
+        COLLECT_LTO_WRAPPER=/usr/libexec/gcc/arm-linux-gnueabihf/13/lto-wrapper
+        Target: arm-linux-gnueabihf
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.2.0-4ubuntu3' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv7-a+fp --with-float=hard --with-mode=thumb --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.2.0 (Ubuntu 13.2.0-4ubuntu3) 
+        COMPILER_PATH=/usr/libexec/gcc/arm-linux-gnueabihf/13/:/usr/libexec/gcc/arm-linux-gnueabihf/13/:/usr/libexec/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/13/:/usr/lib/gcc/arm-linux-gnueabihf/
+        LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/13/:/usr/lib/gcc/arm-linux-gnueabihf/13/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/13/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_6fcb1'  '-mfloat-abi=hard' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+fp' '-march=armv7-a+fp' '-dumpdir' 'cmTC_6fcb1.'
+         /usr/libexec/gcc/arm-linux-gnueabihf/13/collect2 -plugin /usr/libexec/gcc/arm-linux-gnueabihf/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/arm-linux-gnueabihf/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccBiJ0Ya.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu --as-needed -m armelf_linux_eabi -pie -z now -z relro -o cmTC_6fcb1 /usr/lib/gcc/arm-linux-gnueabihf/13/../../../arm-linux-gnueabihf/Scrt1.o /usr/lib/gcc/arm-linux-gnueabihf/13/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/13/crtbeginS.o -L/usr/lib/gcc/arm-linux-gnueabihf/13 -L/usr/lib/gcc/arm-linux-gnueabihf/13/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/13/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_6fcb1.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/arm-linux-gnueabihf/13/crtendS.o /usr/lib/gcc/arm-linux-gnueabihf/13/../../../arm-linux-gnueabihf/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_6fcb1'  '-mfloat-abi=hard' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+fp' '-march=armv7-a+fp' '-dumpdir' 'cmTC_6fcb1.'
+        gmake[1]: Leaving directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-uLRBB2'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/lib/gcc/arm-linux-gnueabihf/13/include]
+          add: [/usr/local/include]
+          add: [/usr/include/arm-linux-gnueabihf]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/lib/gcc/arm-linux-gnueabihf/13/include] ==> [/usr/lib/gcc/arm-linux-gnueabihf/13/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include/arm-linux-gnueabihf] ==> [/usr/include/arm-linux-gnueabihf]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/lib/gcc/arm-linux-gnueabihf/13/include;/usr/local/include;/usr/include/arm-linux-gnueabihf;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(arm-linux-gnueabihf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-uLRBB2']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_6fcb1/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_6fcb1.dir/build.make CMakeFiles/cmTC_6fcb1.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-uLRBB2']
+        ignore line: [Building C object CMakeFiles/cmTC_6fcb1.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/arm-linux-gnueabihf-gcc   -v -o CMakeFiles/cmTC_6fcb1.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.27/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/arm-linux-gnueabihf-gcc]
+        ignore line: [Target: arm-linux-gnueabihf]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.2.0-4ubuntu3' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv7-a+fp --with-float=hard --with-mode=thumb --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.2.0 (Ubuntu 13.2.0-4ubuntu3) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6fcb1.dir/CMakeCCompilerABI.c.o' '-c'  '-mfloat-abi=hard' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+fp' '-march=armv7-a+fp' '-dumpdir' 'CMakeFiles/cmTC_6fcb1.dir/']
+        ignore line: [ /usr/libexec/gcc/arm-linux-gnueabihf/13/cc1 -quiet -v -imultilib . -imultiarch arm-linux-gnueabihf /usr/share/cmake-3.27/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_6fcb1.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mfloat-abi=hard -mtls-dialect=gnu -mthumb -mlibarch=armv7-a+fp -march=armv7-a+fp -version -fstack-protector-strong -Wformat -Wformat-security -o /tmp/ccoOCFkL.s]
+        ignore line: [GNU C17 (Ubuntu 13.2.0-4ubuntu3) version 13.2.0 (arm-linux-gnueabihf)]
+        ignore line: [	compiled by GNU C version 13.2.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.26-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/usr/local/include/arm-linux-gnueabihf"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/13/include-fixed/arm-linux-gnueabihf"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/13/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/13/../../../../arm-linux-gnueabihf/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/lib/gcc/arm-linux-gnueabihf/13/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include/arm-linux-gnueabihf]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: 47b604f9e0218af7a26354775c1bfeaa]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6fcb1.dir/CMakeCCompilerABI.c.o' '-c'  '-mfloat-abi=hard' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+fp' '-march=armv7-a+fp' '-dumpdir' 'CMakeFiles/cmTC_6fcb1.dir/']
+        ignore line: [ as -v -march=armv7-a+fp -mfloat-abi=hard -meabi=5 -o CMakeFiles/cmTC_6fcb1.dir/CMakeCCompilerABI.c.o /tmp/ccoOCFkL.s]
+        ignore line: [GNU assembler version 2.41 (arm-linux-gnueabihf) using BFD version (GNU Binutils for Ubuntu) 2.41]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/arm-linux-gnueabihf/13/:/usr/libexec/gcc/arm-linux-gnueabihf/13/:/usr/libexec/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/13/:/usr/lib/gcc/arm-linux-gnueabihf/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/13/:/usr/lib/gcc/arm-linux-gnueabihf/13/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/13/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6fcb1.dir/CMakeCCompilerABI.c.o' '-c'  '-mfloat-abi=hard' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+fp' '-march=armv7-a+fp' '-dumpdir' 'CMakeFiles/cmTC_6fcb1.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_6fcb1]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6fcb1.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/arm-linux-gnueabihf-gcc  -v -rdynamic CMakeFiles/cmTC_6fcb1.dir/CMakeCCompilerABI.c.o -o cmTC_6fcb1 ]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/arm-linux-gnueabihf-gcc]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/arm-linux-gnueabihf/13/lto-wrapper]
+        ignore line: [Target: arm-linux-gnueabihf]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.2.0-4ubuntu3' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv7-a+fp --with-float=hard --with-mode=thumb --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.2.0 (Ubuntu 13.2.0-4ubuntu3) ]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/arm-linux-gnueabihf/13/:/usr/libexec/gcc/arm-linux-gnueabihf/13/:/usr/libexec/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/13/:/usr/lib/gcc/arm-linux-gnueabihf/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/13/:/usr/lib/gcc/arm-linux-gnueabihf/13/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/13/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_6fcb1'  '-mfloat-abi=hard' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+fp' '-march=armv7-a+fp' '-dumpdir' 'cmTC_6fcb1.']
+        link line: [ /usr/libexec/gcc/arm-linux-gnueabihf/13/collect2 -plugin /usr/libexec/gcc/arm-linux-gnueabihf/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/arm-linux-gnueabihf/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccBiJ0Ya.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu --as-needed -m armelf_linux_eabi -pie -z now -z relro -o cmTC_6fcb1 /usr/lib/gcc/arm-linux-gnueabihf/13/../../../arm-linux-gnueabihf/Scrt1.o /usr/lib/gcc/arm-linux-gnueabihf/13/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/13/crtbeginS.o -L/usr/lib/gcc/arm-linux-gnueabihf/13 -L/usr/lib/gcc/arm-linux-gnueabihf/13/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/13/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_6fcb1.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/arm-linux-gnueabihf/13/crtendS.o /usr/lib/gcc/arm-linux-gnueabihf/13/../../../arm-linux-gnueabihf/crtn.o]
+          arg [/usr/libexec/gcc/arm-linux-gnueabihf/13/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/libexec/gcc/arm-linux-gnueabihf/13/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/libexec/gcc/arm-linux-gnueabihf/13/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccBiJ0Ya.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-export-dynamic] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib/ld-linux-armhf.so.3] ==> ignore
+          arg [-X] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-m] ==> ignore
+          arg [armelf_linux_eabi] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-znow] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_6fcb1] ==> ignore
+          arg [/usr/lib/gcc/arm-linux-gnueabihf/13/../../../arm-linux-gnueabihf/Scrt1.o] ==> obj [/usr/lib/gcc/arm-linux-gnueabihf/13/../../../arm-linux-gnueabihf/Scrt1.o]
+          arg [/usr/lib/gcc/arm-linux-gnueabihf/13/../../../arm-linux-gnueabihf/crti.o] ==> obj [/usr/lib/gcc/arm-linux-gnueabihf/13/../../../arm-linux-gnueabihf/crti.o]
+          arg [/usr/lib/gcc/arm-linux-gnueabihf/13/crtbeginS.o] ==> obj [/usr/lib/gcc/arm-linux-gnueabihf/13/crtbeginS.o]
+          arg [-L/usr/lib/gcc/arm-linux-gnueabihf/13] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/13]
+          arg [-L/usr/lib/gcc/arm-linux-gnueabihf/13/../../../arm-linux-gnueabihf] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/13/../../../arm-linux-gnueabihf]
+          arg [-L/usr/lib/gcc/arm-linux-gnueabihf/13/../../..] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/13/../../..]
+          arg [-L/lib/arm-linux-gnueabihf] ==> dir [/lib/arm-linux-gnueabihf]
+          arg [-L/usr/lib/arm-linux-gnueabihf] ==> dir [/usr/lib/arm-linux-gnueabihf]
+          arg [CMakeFiles/cmTC_6fcb1.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [/usr/lib/gcc/arm-linux-gnueabihf/13/crtendS.o] ==> obj [/usr/lib/gcc/arm-linux-gnueabihf/13/crtendS.o]
+          arg [/usr/lib/gcc/arm-linux-gnueabihf/13/../../../arm-linux-gnueabihf/crtn.o] ==> obj [/usr/lib/gcc/arm-linux-gnueabihf/13/../../../arm-linux-gnueabihf/crtn.o]
+        collapse obj [/usr/lib/gcc/arm-linux-gnueabihf/13/../../../arm-linux-gnueabihf/Scrt1.o] ==> [/usr/lib/arm-linux-gnueabihf/Scrt1.o]
+        collapse obj [/usr/lib/gcc/arm-linux-gnueabihf/13/../../../arm-linux-gnueabihf/crti.o] ==> [/usr/lib/arm-linux-gnueabihf/crti.o]
+        collapse obj [/usr/lib/gcc/arm-linux-gnueabihf/13/../../../arm-linux-gnueabihf/crtn.o] ==> [/usr/lib/arm-linux-gnueabihf/crtn.o]
+        collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/13] ==> [/usr/lib/gcc/arm-linux-gnueabihf/13]
+        collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/13/../../../arm-linux-gnueabihf] ==> [/usr/lib/arm-linux-gnueabihf]
+        collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/13/../../..] ==> [/usr/lib]
+        collapse library dir [/lib/arm-linux-gnueabihf] ==> [/lib/arm-linux-gnueabihf]
+        collapse library dir [/usr/lib/arm-linux-gnueabihf] ==> [/usr/lib/arm-linux-gnueabihf]
+        implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+        implicit objs: [/usr/lib/arm-linux-gnueabihf/Scrt1.o;/usr/lib/arm-linux-gnueabihf/crti.o;/usr/lib/gcc/arm-linux-gnueabihf/13/crtbeginS.o;/usr/lib/gcc/arm-linux-gnueabihf/13/crtendS.o;/usr/lib/arm-linux-gnueabihf/crtn.o]
+        implicit dirs: [/usr/lib/gcc/arm-linux-gnueabihf/13;/usr/lib/arm-linux-gnueabihf;/usr/lib;/lib/arm-linux-gnueabihf]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-NmUaXE"
+      binary: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-NmUaXE"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-NmUaXE'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e1f52/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_e1f52.dir/build.make CMakeFiles/cmTC_e1f52.dir/build
+        gmake[1]: Entering directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-NmUaXE'
+        Building CXX object CMakeFiles/cmTC_e1f52.dir/CMakeCXXCompilerABI.cpp.o
+        /system/bin/bcc    -o CMakeFiles/cmTC_e1f52.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp
+        bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+        bcc: Did you mean '-C'?
+        gmake[1]: *** [CMakeFiles/cmTC_e1f52.dir/build.make:78: CMakeFiles/cmTC_e1f52.dir/CMakeCXXCompilerABI.cpp.o] Error 1
+        gmake[1]: Leaving directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-NmUaXE'
+        gmake: *** [Makefile:127: cmTC_e1f52/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:49 (try_compile)"
+      - "CMakeLists.txt"
+    checks:
+      - "Check for working CXX compiler: /system/bin/bcc"
+    directories:
+      source: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-EKHhOF"
+      binary: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-EKHhOF"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-EKHhOF'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_7c8bb/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_7c8bb.dir/build.make CMakeFiles/cmTC_7c8bb.dir/build
+        gmake[1]: Entering directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-EKHhOF'
+        Building CXX object CMakeFiles/cmTC_7c8bb.dir/testCXXCompiler.cxx.o
+        /system/bin/bcc    -o CMakeFiles/cmTC_7c8bb.dir/testCXXCompiler.cxx.o -c /home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-EKHhOF/testCXXCompiler.cxx
+        bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+        bcc: Did you mean '-C'?
+        gmake[1]: *** [CMakeFiles/cmTC_7c8bb.dir/build.make:78: CMakeFiles/cmTC_7c8bb.dir/testCXXCompiler.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-EKHhOF'
+        gmake: *** [Makefile:127: cmTC_7c8bb/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --c++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--c++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --ec++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--ec++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-bclib'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--target=arm-arm-none-eabi'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-merge=arm-arm-none-eabi'?
+      bcc: Unknown command line argument '-mcpu=cortex-m3'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-mlsm=cortex-m3'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      bcc: Unknown command line argument '-I__does_not_exist__'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-dfsan-abilist'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --c++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--c++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --ec++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--ec++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-bclib'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--target=arm-arm-none-eabi'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-merge=arm-arm-none-eabi'?
+      bcc: Unknown command line argument '-mcpu=cortex-m3'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-mlsm=cortex-m3'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      bcc: Unknown command line argument '-I__does_not_exist__'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-dfsan-abilist'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1117 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+      bcc: Not enough positional command line arguments specified!
+      Must specify at least 1 positional arguments: See: /system/bin/bcc -help
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1117 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+      bcc: Not enough positional command line arguments specified!
+      Must specify at least 1 positional arguments: See: /system/bin/bcc -help
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-w24d5E"
+      binary: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-w24d5E"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-w24d5E'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_2b57c/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_2b57c.dir/build.make CMakeFiles/cmTC_2b57c.dir/build
+        gmake[1]: Entering directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-w24d5E'
+        Building CXX object CMakeFiles/cmTC_2b57c.dir/CMakeCXXCompilerABI.cpp.o
+        /system/bin/bcc    -o CMakeFiles/cmTC_2b57c.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp
+        bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+        bcc: Did you mean '-C'?
+        gmake[1]: *** [CMakeFiles/cmTC_2b57c.dir/build.make:78: CMakeFiles/cmTC_2b57c.dir/CMakeCXXCompilerABI.cpp.o] Error 1
+        gmake[1]: Leaving directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-w24d5E'
+        gmake: *** [Makefile:127: cmTC_2b57c/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:49 (try_compile)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Check for working CXX compiler: /system/bin/bcc"
+    directories:
+      source: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-AiTr2a"
+      binary: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-AiTr2a"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-AiTr2a'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_7d227/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_7d227.dir/build.make CMakeFiles/cmTC_7d227.dir/build
+        gmake[1]: Entering directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-AiTr2a'
+        Building CXX object CMakeFiles/cmTC_7d227.dir/testCXXCompiler.cxx.o
+        /system/bin/bcc    -o CMakeFiles/cmTC_7d227.dir/testCXXCompiler.cxx.o -c /home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-AiTr2a/testCXXCompiler.cxx
+        bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+        bcc: Did you mean '-C'?
+        gmake[1]: *** [CMakeFiles/cmTC_7d227.dir/build.make:78: CMakeFiles/cmTC_7d227.dir/testCXXCompiler.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-AiTr2a'
+        gmake: *** [Makefile:127: cmTC_7d227/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --c++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--c++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --ec++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--ec++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-bclib'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--target=arm-arm-none-eabi'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-merge=arm-arm-none-eabi'?
+      bcc: Unknown command line argument '-mcpu=cortex-m3'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-mlsm=cortex-m3'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      bcc: Unknown command line argument '-I__does_not_exist__'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-dfsan-abilist'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --c++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--c++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --ec++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--ec++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-bclib'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--target=arm-arm-none-eabi'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-merge=arm-arm-none-eabi'?
+      bcc: Unknown command line argument '-mcpu=cortex-m3'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-mlsm=cortex-m3'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      bcc: Unknown command line argument '-I__does_not_exist__'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-dfsan-abilist'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1117 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+      bcc: Not enough positional command line arguments specified!
+      Must specify at least 1 positional arguments: See: /system/bin/bcc -help
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1117 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+      bcc: Not enough positional command line arguments specified!
+      Must specify at least 1 positional arguments: See: /system/bin/bcc -help
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-6e7fON"
+      binary: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-6e7fON"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-6e7fON'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_4f3f1/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_4f3f1.dir/build.make CMakeFiles/cmTC_4f3f1.dir/build
+        gmake[1]: Entering directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-6e7fON'
+        Building CXX object CMakeFiles/cmTC_4f3f1.dir/CMakeCXXCompilerABI.cpp.o
+        /system/bin/bcc    -o CMakeFiles/cmTC_4f3f1.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp
+        bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+        bcc: Did you mean '-C'?
+        gmake[1]: *** [CMakeFiles/cmTC_4f3f1.dir/build.make:78: CMakeFiles/cmTC_4f3f1.dir/CMakeCXXCompilerABI.cpp.o] Error 1
+        gmake[1]: Leaving directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-6e7fON'
+        gmake: *** [Makefile:127: cmTC_4f3f1/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:49 (try_compile)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Check for working CXX compiler: /system/bin/bcc"
+    directories:
+      source: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-oY20Qe"
+      binary: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-oY20Qe"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-oY20Qe'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_45ee3/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_45ee3.dir/build.make CMakeFiles/cmTC_45ee3.dir/build
+        gmake[1]: Entering directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-oY20Qe'
+        Building CXX object CMakeFiles/cmTC_45ee3.dir/testCXXCompiler.cxx.o
+        /system/bin/bcc    -o CMakeFiles/cmTC_45ee3.dir/testCXXCompiler.cxx.o -c /home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-oY20Qe/testCXXCompiler.cxx
+        bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+        bcc: Did you mean '-C'?
+        gmake[1]: *** [CMakeFiles/cmTC_45ee3.dir/build.make:78: CMakeFiles/cmTC_45ee3.dir/testCXXCompiler.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-oY20Qe'
+        gmake: *** [Makefile:127: cmTC_45ee3/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --c++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--c++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --ec++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--ec++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-bclib'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--target=arm-arm-none-eabi'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-merge=arm-arm-none-eabi'?
+      bcc: Unknown command line argument '-mcpu=cortex-m3'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-mlsm=cortex-m3'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      bcc: Unknown command line argument '-I__does_not_exist__'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-dfsan-abilist'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --c++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--c++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --ec++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--ec++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-bclib'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--target=arm-arm-none-eabi'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-merge=arm-arm-none-eabi'?
+      bcc: Unknown command line argument '-mcpu=cortex-m3'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-mlsm=cortex-m3'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      bcc: Unknown command line argument '-I__does_not_exist__'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-dfsan-abilist'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1117 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+      bcc: Not enough positional command line arguments specified!
+      Must specify at least 1 positional arguments: See: /system/bin/bcc -help
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1117 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+      bcc: Not enough positional command line arguments specified!
+      Must specify at least 1 positional arguments: See: /system/bin/bcc -help
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-zCav4w"
+      binary: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-zCav4w"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-zCav4w'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_02356/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_02356.dir/build.make CMakeFiles/cmTC_02356.dir/build
+        gmake[1]: Entering directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-zCav4w'
+        Building CXX object CMakeFiles/cmTC_02356.dir/CMakeCXXCompilerABI.cpp.o
+        /system/bin/bcc    -o CMakeFiles/cmTC_02356.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp
+        bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+        bcc: Did you mean '-C'?
+        gmake[1]: *** [CMakeFiles/cmTC_02356.dir/build.make:78: CMakeFiles/cmTC_02356.dir/CMakeCXXCompilerABI.cpp.o] Error 1
+        gmake[1]: Leaving directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-zCav4w'
+        gmake: *** [Makefile:127: cmTC_02356/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:49 (try_compile)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Check for working CXX compiler: /system/bin/bcc"
+    directories:
+      source: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-R5gbJs"
+      binary: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-R5gbJs"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-R5gbJs'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_bbbf8/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_bbbf8.dir/build.make CMakeFiles/cmTC_bbbf8.dir/build
+        gmake[1]: Entering directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-R5gbJs'
+        Building CXX object CMakeFiles/cmTC_bbbf8.dir/testCXXCompiler.cxx.o
+        /system/bin/bcc    -o CMakeFiles/cmTC_bbbf8.dir/testCXXCompiler.cxx.o -c /home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-R5gbJs/testCXXCompiler.cxx
+        bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+        bcc: Did you mean '-C'?
+        gmake[1]: *** [CMakeFiles/cmTC_bbbf8.dir/build.make:78: CMakeFiles/cmTC_bbbf8.dir/testCXXCompiler.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-R5gbJs'
+        gmake: *** [Makefile:127: cmTC_bbbf8/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --c++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--c++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --ec++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--ec++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-bclib'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--target=arm-arm-none-eabi'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-merge=arm-arm-none-eabi'?
+      bcc: Unknown command line argument '-mcpu=cortex-m3'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-mlsm=cortex-m3'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      bcc: Unknown command line argument '-I__does_not_exist__'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-dfsan-abilist'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --c++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--c++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --ec++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--ec++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-bclib'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--target=arm-arm-none-eabi'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-merge=arm-arm-none-eabi'?
+      bcc: Unknown command line argument '-mcpu=cortex-m3'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-mlsm=cortex-m3'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      bcc: Unknown command line argument '-I__does_not_exist__'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-dfsan-abilist'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1117 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+      bcc: Not enough positional command line arguments specified!
+      Must specify at least 1 positional arguments: See: /system/bin/bcc -help
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1117 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+      bcc: Not enough positional command line arguments specified!
+      Must specify at least 1 positional arguments: See: /system/bin/bcc -help
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-13Clao"
+      binary: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-13Clao"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-13Clao'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_28713/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_28713.dir/build.make CMakeFiles/cmTC_28713.dir/build
+        gmake[1]: Entering directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-13Clao'
+        Building CXX object CMakeFiles/cmTC_28713.dir/CMakeCXXCompilerABI.cpp.o
+        /system/bin/bcc    -o CMakeFiles/cmTC_28713.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp
+        bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+        bcc: Did you mean '-C'?
+        gmake[1]: *** [CMakeFiles/cmTC_28713.dir/build.make:78: CMakeFiles/cmTC_28713.dir/CMakeCXXCompilerABI.cpp.o] Error 1
+        gmake[1]: Leaving directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-13Clao'
+        gmake: *** [Makefile:127: cmTC_28713/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:49 (try_compile)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Check for working CXX compiler: /system/bin/bcc"
+    directories:
+      source: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-A0ddUi"
+      binary: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-A0ddUi"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-A0ddUi'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_babd6/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_babd6.dir/build.make CMakeFiles/cmTC_babd6.dir/build
+        gmake[1]: Entering directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-A0ddUi'
+        Building CXX object CMakeFiles/cmTC_babd6.dir/testCXXCompiler.cxx.o
+        /system/bin/bcc    -o CMakeFiles/cmTC_babd6.dir/testCXXCompiler.cxx.o -c /home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-A0ddUi/testCXXCompiler.cxx
+        bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+        bcc: Did you mean '-C'?
+        gmake[1]: *** [CMakeFiles/cmTC_babd6.dir/build.make:78: CMakeFiles/cmTC_babd6.dir/testCXXCompiler.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-A0ddUi'
+        gmake: *** [Makefile:127: cmTC_babd6/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --c++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--c++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --ec++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--ec++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-bclib'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--target=arm-arm-none-eabi'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-merge=arm-arm-none-eabi'?
+      bcc: Unknown command line argument '-mcpu=cortex-m3'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-mlsm=cortex-m3'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      bcc: Unknown command line argument '-I__does_not_exist__'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-dfsan-abilist'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --c++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--c++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --ec++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--ec++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-bclib'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--target=arm-arm-none-eabi'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-merge=arm-arm-none-eabi'?
+      bcc: Unknown command line argument '-mcpu=cortex-m3'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-mlsm=cortex-m3'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      bcc: Unknown command line argument '-I__does_not_exist__'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-dfsan-abilist'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1117 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+      bcc: Not enough positional command line arguments specified!
+      Must specify at least 1 positional arguments: See: /system/bin/bcc -help
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1117 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+      bcc: Not enough positional command line arguments specified!
+      Must specify at least 1 positional arguments: See: /system/bin/bcc -help
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-UVzxoT"
+      binary: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-UVzxoT"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-UVzxoT'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_5cc14/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_5cc14.dir/build.make CMakeFiles/cmTC_5cc14.dir/build
+        gmake[1]: Entering directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-UVzxoT'
+        Building CXX object CMakeFiles/cmTC_5cc14.dir/CMakeCXXCompilerABI.cpp.o
+        /system/bin/bcc    -o CMakeFiles/cmTC_5cc14.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp
+        bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+        bcc: Did you mean '-C'?
+        gmake[1]: *** [CMakeFiles/cmTC_5cc14.dir/build.make:78: CMakeFiles/cmTC_5cc14.dir/CMakeCXXCompilerABI.cpp.o] Error 1
+        gmake[1]: Leaving directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-UVzxoT'
+        gmake: *** [Makefile:127: cmTC_5cc14/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:49 (try_compile)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Check for working CXX compiler: /system/bin/bcc"
+    directories:
+      source: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-nI4bpm"
+      binary: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-nI4bpm"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-nI4bpm'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e0f70/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_e0f70.dir/build.make CMakeFiles/cmTC_e0f70.dir/build
+        gmake[1]: Entering directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-nI4bpm'
+        Building CXX object CMakeFiles/cmTC_e0f70.dir/testCXXCompiler.cxx.o
+        /system/bin/bcc    -o CMakeFiles/cmTC_e0f70.dir/testCXXCompiler.cxx.o -c /home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-nI4bpm/testCXXCompiler.cxx
+        bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+        bcc: Did you mean '-C'?
+        gmake[1]: *** [CMakeFiles/cmTC_e0f70.dir/build.make:78: CMakeFiles/cmTC_e0f70.dir/testCXXCompiler.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-nI4bpm'
+        gmake: *** [Makefile:127: cmTC_e0f70/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --c++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--c++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --ec++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--ec++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-bclib'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--target=arm-arm-none-eabi'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-merge=arm-arm-none-eabi'?
+      bcc: Unknown command line argument '-mcpu=cortex-m3'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-mlsm=cortex-m3'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      bcc: Unknown command line argument '-I__does_not_exist__'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-dfsan-abilist'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --c++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--c++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --ec++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--ec++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-bclib'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--target=arm-arm-none-eabi'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-merge=arm-arm-none-eabi'?
+      bcc: Unknown command line argument '-mcpu=cortex-m3'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-mlsm=cortex-m3'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      bcc: Unknown command line argument '-I__does_not_exist__'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-dfsan-abilist'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1117 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+      bcc: Not enough positional command line arguments specified!
+      Must specify at least 1 positional arguments: See: /system/bin/bcc -help
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1117 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+      bcc: Not enough positional command line arguments specified!
+      Must specify at least 1 positional arguments: See: /system/bin/bcc -help
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-Nh48pV"
+      binary: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-Nh48pV"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-Nh48pV'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_16ac8/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_16ac8.dir/build.make CMakeFiles/cmTC_16ac8.dir/build
+        gmake[1]: Entering directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-Nh48pV'
+        Building CXX object CMakeFiles/cmTC_16ac8.dir/CMakeCXXCompilerABI.cpp.o
+        /system/bin/bcc    -o CMakeFiles/cmTC_16ac8.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp
+        bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+        bcc: Did you mean '-C'?
+        gmake[1]: *** [CMakeFiles/cmTC_16ac8.dir/build.make:78: CMakeFiles/cmTC_16ac8.dir/CMakeCXXCompilerABI.cpp.o] Error 1
+        gmake[1]: Leaving directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-Nh48pV'
+        gmake: *** [Makefile:127: cmTC_16ac8/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:49 (try_compile)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Check for working CXX compiler: /system/bin/bcc"
+    directories:
+      source: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-ixYJhQ"
+      binary: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-ixYJhQ"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-ixYJhQ'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_00db6/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_00db6.dir/build.make CMakeFiles/cmTC_00db6.dir/build
+        gmake[1]: Entering directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-ixYJhQ'
+        Building CXX object CMakeFiles/cmTC_00db6.dir/testCXXCompiler.cxx.o
+        /system/bin/bcc    -o CMakeFiles/cmTC_00db6.dir/testCXXCompiler.cxx.o -c /home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-ixYJhQ/testCXXCompiler.cxx
+        bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+        bcc: Did you mean '-C'?
+        gmake[1]: *** [CMakeFiles/cmTC_00db6.dir/build.make:78: CMakeFiles/cmTC_00db6.dir/testCXXCompiler.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-ixYJhQ'
+        gmake: *** [Makefile:127: cmTC_00db6/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --c++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--c++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --ec++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--ec++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-bclib'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--target=arm-arm-none-eabi'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-merge=arm-arm-none-eabi'?
+      bcc: Unknown command line argument '-mcpu=cortex-m3'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-mlsm=cortex-m3'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      bcc: Unknown command line argument '-I__does_not_exist__'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-dfsan-abilist'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --c++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--c++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --ec++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--ec++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-bclib'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--target=arm-arm-none-eabi'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-merge=arm-arm-none-eabi'?
+      bcc: Unknown command line argument '-mcpu=cortex-m3'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-mlsm=cortex-m3'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      bcc: Unknown command line argument '-I__does_not_exist__'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-dfsan-abilist'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1117 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+      bcc: Not enough positional command line arguments specified!
+      Must specify at least 1 positional arguments: See: /system/bin/bcc -help
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1117 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+      bcc: Not enough positional command line arguments specified!
+      Must specify at least 1 positional arguments: See: /system/bin/bcc -help
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-YFrX0M"
+      binary: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-YFrX0M"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-YFrX0M'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b4afa/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_b4afa.dir/build.make CMakeFiles/cmTC_b4afa.dir/build
+        gmake[1]: Entering directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-YFrX0M'
+        Building CXX object CMakeFiles/cmTC_b4afa.dir/CMakeCXXCompilerABI.cpp.o
+        /system/bin/bcc    -o CMakeFiles/cmTC_b4afa.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp
+        bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+        bcc: Did you mean '-C'?
+        gmake[1]: *** [CMakeFiles/cmTC_b4afa.dir/build.make:78: CMakeFiles/cmTC_b4afa.dir/CMakeCXXCompilerABI.cpp.o] Error 1
+        gmake[1]: Leaving directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-YFrX0M'
+        gmake: *** [Makefile:127: cmTC_b4afa/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:49 (try_compile)"
+      - "CMakeLists.txt:4 (project)"
+    checks:
+      - "Check for working CXX compiler: /system/bin/bcc"
+    directories:
+      source: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-F3owvc"
+      binary: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-F3owvc"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-F3owvc'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_eef58/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_eef58.dir/build.make CMakeFiles/cmTC_eef58.dir/build
+        gmake[1]: Entering directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-F3owvc'
+        Building CXX object CMakeFiles/cmTC_eef58.dir/testCXXCompiler.cxx.o
+        /system/bin/bcc    -o CMakeFiles/cmTC_eef58.dir/testCXXCompiler.cxx.o -c /home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-F3owvc/testCXXCompiler.cxx
+        bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+        bcc: Did you mean '-C'?
+        gmake[1]: *** [CMakeFiles/cmTC_eef58.dir/build.make:78: CMakeFiles/cmTC_eef58.dir/testCXXCompiler.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-F3owvc'
+        gmake: *** [Makefile:127: cmTC_eef58/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --c++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--c++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --ec++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--ec++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-bclib'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--target=arm-arm-none-eabi'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-merge=arm-arm-none-eabi'?
+      bcc: Unknown command line argument '-mcpu=cortex-m3'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-mlsm=cortex-m3'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      bcc: Unknown command line argument '-I__does_not_exist__'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-dfsan-abilist'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --c++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--c++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --ec++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--ec++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-bclib'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--target=arm-arm-none-eabi'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-merge=arm-arm-none-eabi'?
+      bcc: Unknown command line argument '-mcpu=cortex-m3'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-mlsm=cortex-m3'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      bcc: Unknown command line argument '-I__does_not_exist__'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-dfsan-abilist'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1117 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+      bcc: Not enough positional command line arguments specified!
+      Must specify at least 1 positional arguments: See: /system/bin/bcc -help
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1117 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+      bcc: Not enough positional command line arguments specified!
+      Must specify at least 1 positional arguments: See: /system/bin/bcc -help
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-Hwhawy"
+      binary: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-Hwhawy"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-Hwhawy'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c3dfd/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_c3dfd.dir/build.make CMakeFiles/cmTC_c3dfd.dir/build
+        gmake[1]: Entering directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-Hwhawy'
+        Building CXX object CMakeFiles/cmTC_c3dfd.dir/CMakeCXXCompilerABI.cpp.o
+        /system/bin/bcc    -o CMakeFiles/cmTC_c3dfd.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp
+        bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+        bcc: Did you mean '-C'?
+        gmake[1]: *** [CMakeFiles/cmTC_c3dfd.dir/build.make:78: CMakeFiles/cmTC_c3dfd.dir/CMakeCXXCompilerABI.cpp.o] Error 1
+        gmake[1]: Leaving directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-Hwhawy'
+        gmake: *** [Makefile:127: cmTC_c3dfd/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:49 (try_compile)"
+      - "CMakeLists.txt:4 (project)"
+    checks:
+      - "Check for working CXX compiler: /system/bin/bcc"
+    directories:
+      source: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-7ApJxK"
+      binary: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-7ApJxK"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-7ApJxK'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_0ed26/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_0ed26.dir/build.make CMakeFiles/cmTC_0ed26.dir/build
+        gmake[1]: Entering directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-7ApJxK'
+        Building CXX object CMakeFiles/cmTC_0ed26.dir/testCXXCompiler.cxx.o
+        /system/bin/bcc    -o CMakeFiles/cmTC_0ed26.dir/testCXXCompiler.cxx.o -c /home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-7ApJxK/testCXXCompiler.cxx
+        bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+        bcc: Did you mean '-C'?
+        gmake[1]: *** [CMakeFiles/cmTC_0ed26.dir/build.make:78: CMakeFiles/cmTC_0ed26.dir/testCXXCompiler.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-7ApJxK'
+        gmake: *** [Makefile:127: cmTC_0ed26/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --c++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--c++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --ec++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--ec++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-bclib'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--target=arm-arm-none-eabi'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-merge=arm-arm-none-eabi'?
+      bcc: Unknown command line argument '-mcpu=cortex-m3'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-mlsm=cortex-m3'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      bcc: Unknown command line argument '-I__does_not_exist__'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-dfsan-abilist'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --c++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--c++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --ec++ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--ec++'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-bclib'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '--target=arm-arm-none-eabi'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-merge=arm-arm-none-eabi'?
+      bcc: Unknown command line argument '-mcpu=cortex-m3'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-mlsm=cortex-m3'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /system/bin/bcc 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      1
+      bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-C'?
+      bcc: Unknown command line argument '-I__does_not_exist__'.  Try: '/system/bin/bcc -help'
+      bcc: Did you mean '-dfsan-abilist'?
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1117 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+      bcc: Not enough positional command line arguments specified!
+      Must specify at least 1 positional arguments: See: /system/bin/bcc -help
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1117 (message)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+      bcc: Not enough positional command line arguments specified!
+      Must specify at least 1 positional arguments: See: /system/bin/bcc -help
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-DExsbp"
+      binary: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-DExsbp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-DExsbp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c2fa7/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_c2fa7.dir/build.make CMakeFiles/cmTC_c2fa7.dir/build
+        gmake[1]: Entering directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-DExsbp'
+        Building CXX object CMakeFiles/cmTC_c2fa7.dir/CMakeCXXCompilerABI.cpp.o
+        /system/bin/bcc    -o CMakeFiles/cmTC_c2fa7.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp
+        bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+        bcc: Did you mean '-C'?
+        gmake[1]: *** [CMakeFiles/cmTC_c2fa7.dir/build.make:78: CMakeFiles/cmTC_c2fa7.dir/CMakeCXXCompilerABI.cpp.o] Error 1
+        gmake[1]: Leaving directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-DExsbp'
+        gmake: *** [Makefile:127: cmTC_c2fa7/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:49 (try_compile)"
+      - "CMakeLists.txt:4 (project)"
+    checks:
+      - "Check for working CXX compiler: /system/bin/bcc"
+    directories:
+      source: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-cCrPrL"
+      binary: "/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-cCrPrL"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-cCrPrL'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_709b5/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_709b5.dir/build.make CMakeFiles/cmTC_709b5.dir/build
+        gmake[1]: Entering directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-cCrPrL'
+        Building CXX object CMakeFiles/cmTC_709b5.dir/testCXXCompiler.cxx.o
+        /system/bin/bcc    -o CMakeFiles/cmTC_709b5.dir/testCXXCompiler.cxx.o -c /home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-cCrPrL/testCXXCompiler.cxx
+        bcc: Unknown command line argument '-c'.  Try: '/system/bin/bcc -help'
+        bcc: Did you mean '-C'?
+        gmake[1]: *** [CMakeFiles/cmTC_709b5.dir/build.make:78: CMakeFiles/cmTC_709b5.dir/testCXXCompiler.cxx.o] Error 1
+        gmake[1]: Leaving directory '/home/rPatsher/patsher2d-x-2.5/build/CMakeFiles/CMakeScratch/TryCompile-cCrPrL'
+        gmake: *** [Makefile:127: cmTC_709b5/fast] Error 2
+        
+      exitCode: 2
+...
