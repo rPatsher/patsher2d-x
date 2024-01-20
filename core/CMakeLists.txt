@@ -1,7 +1,7 @@
 #/*
- #* renderer.cpp
+ #* CMakeLists.txt
  #* 
- #* Copyright 2024 Unknown <rPatsher@localhost>
+ #* Copyright 2024 rPatsher
  #* 
  #* This program is free software; you can redistribute it and/or modify
  #* it under the terms of the GNU General Public License as published by
@@ -20,6 +20,7 @@
  #* 
  #* 
 # */
+
 
 # This File `CMakeLists.txt` To Generate The Patsher2D-X Engine Libary 
 # Build The LibPatsher2D-X

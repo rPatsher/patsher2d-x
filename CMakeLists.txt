@@ -47,3 +47,9 @@ if (NOT raylib_FOUND)
     FetchContent_MakeAvailable(raylib)
 endif()
 set(BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+
+
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
+
+
