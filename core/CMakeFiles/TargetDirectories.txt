@@ -1,2 +1,0 @@
-/home/rPatsher/patsher2d-x-2.5/core/CMakeFiles/edit_cache.dir
-/home/rPatsher/patsher2d-x-2.5/core/CMakeFiles/rebuild_cache.dir
