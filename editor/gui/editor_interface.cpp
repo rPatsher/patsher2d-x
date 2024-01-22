@@ -1,5 +1,5 @@
 /*
- * texture.h
+ * editor_interface.cpp
  * 
  * Copyright 2024 rPatsher <>
  * 
@@ -22,32 +22,18 @@
  */
 
 
-#ifndef TEXTURE_H
-#define TEXTURE_H
+#include "editor_interface.h"
 
 
-#include "core/typedefs.h"
-#include "core/object/ref_counted.h"
-#include "core/object/m_object.h"
-
-class Texture
+EditorInterface::EditorInterface()
+	: Control()
 {
-	public:
-		Texture();
-		virtual ~Texture();
-	public:
-		void load(const char* file);
-		void unload() const;
-		
-		void draw();
-		void set_width(const int width);
-		void set_height(const int height);
-		
-		int get_width() const;
-		int get_height() const;
 	
-	private:
-		Ref<Texture2D> texture;
-};
+}
 
-#endif /* TEXTURE_H */ 
+
+EditorInterface::~EditorInterface()
+{
+	
+}
+

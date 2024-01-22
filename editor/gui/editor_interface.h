@@ -1,5 +1,5 @@
 /*
- * texture.h
+ * editor_interface.h
  * 
  * Copyright 2024 rPatsher <>
  * 
@@ -22,32 +22,45 @@
  */
 
 
-#ifndef TEXTURE_H
-#define TEXTURE_H
+#ifndef EDITOR_INTERFACE_H
+#define EDITOR_INTERFACE_H
 
+#include "scene/gui/control.h"
+#include "scene/gui/panel.h"
+#include "scene/gui/button.h"
+#include "scene/gui/color_picker.h"
+#include "scene/gui/box.h"
+#include "scene/gui/hbox.h"
+#include "scene/gui/vbox.h"
+#include "scene/gui/window_box.h"
 
-#include "core/typedefs.h"
-#include "core/object/ref_counted.h"
+#include "scene/runtime/assets_manager.h"
+#include "scene/main/node.h"
+#include "scene/main/window.h"
+
 #include "core/object/m_object.h"
+#include "core/object/ref_counted.h"
 
-class Texture
+
+#include "external/extensions/controls/control.h"
+#include "external/extensions/controls/control_extension.h"
+#include "external/extensions/controls/control_button.h"
+
+
+class EditorInterface: public Control
 {
+	CLASS(EditorInterface , Control);
 	public:
-		Texture();
-		virtual ~Texture();
+		enum Mode {
+			
+			
+		};
 	public:
-		void load(const char* file);
-		void unload() const;
-		
-		void draw();
-		void set_width(const int width);
-		void set_height(const int height);
-		
-		int get_width() const;
-		int get_height() const;
+		EditorInterface();
+		virtual ~EditorInterface();
 	
 	private:
-		Ref<Texture2D> texture;
+		
 };
 
-#endif /* TEXTURE_H */ 
+#endif /* EDITOR_INTERFACE_H */ 

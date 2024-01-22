@@ -23,7 +23,7 @@
  
 
 # Cmake Version
-cmake_minimum_required(VERSION 3.27.4)
+cmake_minimum_required(VERSION 3.16.3)
 
 # Project 
 project(patsher2d-x VERSION 2.5) 
@@ -33,7 +33,7 @@ project(patsher2d-x VERSION 2.5)
 #
 include(core/CMakeLists.txt)
 include(main/CMakeLists.txt)
-
+include(scene/CMakeLists.txt)
 # Include raylib if necessary
 
 # Targert Link Libs
