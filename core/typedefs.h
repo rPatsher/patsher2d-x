@@ -90,7 +90,7 @@ class ClassDB;
 #include <vector>
 #include <map>
 
-
+#include <gtk/gtk.h>
 #include <glfw/include/GLFW/glfw3.h>
 #include <glfw/include/GLFW/glfw3native.h>
 

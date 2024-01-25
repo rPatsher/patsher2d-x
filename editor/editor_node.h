@@ -27,6 +27,7 @@
 
 #include "core/object/ref_counted.h"
 #include "core/object/m_class.h"
+#include "core/object/m_object.h"
 #include "core/templates/vector.h"
 #include "core/templates/map.h"
 #include "core/templates/hash_map.h"
@@ -50,19 +51,22 @@
 #include "scene/themes/default_theme.h"
 
 
+class TabBar;
+class AcceptDialogs;
+class MenuBar;
+class ListItem;
+class TreeItem;
+class Texture2D;
 
-/**
- * @class EditorNode
- * @brief EditorNode Is a editor patsher2d engine editor interface for to make a games with
- * platform 2d and 3d
- * 
- */
+
+
+
 class EditorNode: public Node
-	MCLASS(EditorNode , Node);
+	CLASS(EditorNode , Node);
 {
 	
 	public:
-		enum MenuBar {
+		enum ModeMenuBar {
 			MENU_SCENE,
 			MENU_BAR_PROJECT,
 			MENU_BAR_EDITOR,
@@ -86,4 +90,7 @@ class EditorNode: public Node
 	
 };
 
+class EditorNodeDialogs : public AcceptDialogs {
+	CLASS(EditorNodeDialogs , AcceptDialogs);
+};
 #endif /* EDITOR_NODE_H */ 

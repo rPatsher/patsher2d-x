@@ -1,11 +1,11 @@
-#ifndef STRING_H
-#define STRING_H
+#ifndef USTRING_H
+#define USTRING_H
 
 #include <iostream>
 #include <string>
 
 #include "core/templates/vector.h"
-
+#include "core/templates/map.h"
 
 class String {
 private:

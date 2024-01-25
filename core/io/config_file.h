@@ -1,7 +1,7 @@
 /*
  * config_file.h
  * 
- * Copyright 2024 Unknown <rPatsher@localhost>
+ * Copyright 2024 rPatsher
  * 
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -25,15 +25,19 @@
 #ifndef CONFIG_FILE_H
 #define CONFIG_FILE_H
 
-#include <core/io/data.h>
-#include <core/object/m_class.h>
-
+#i
 #include <filesystem>
 #include <cassert>
 #include <cstring>
 
-class ConfigFile: public Data
-	MCLASS(ConfigFile , Data);
+#include <string>
+#include <unordered_map>
+#include <vector>
+
+
+
+class ConfigFile: public RefCounted
+	CLASS(ConfigFile , RefCounted);
 {
 	public:
 		ConfigFile();

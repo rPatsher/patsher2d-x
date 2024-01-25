@@ -22,30 +22,30 @@
 # */
 
 set(SOURCES_HEADER 
-	config/engine.h,
-	config/project_settings.h,
-	event/event_screen_touch.h,
-	event/event_screen_drag.h,
-	event/event_mouse_button.h,
-	event/event_mouse_motion.h,
-	event/event_mouse_button_touch.h,
-	error/error_list.h,
-	error/error_macros.h,
-	input/input.h,
-	input/input_map.h,
-	input/input_list.h,
-	io/file_access.h,
-	io/file_system.h,
-	io/file_access_dock,
-	io/resources.h,
-	io/dir_access.h,
-	io/http_client.h,
-	io/http_server.h,
-	io/file_utils.h,
-	io/config_file.h,
-	extension/extension.h,
-	extension/extension_manager.h,
-	os/os.h,
+	config/engine.h
+	config/project_settings.h
+	event/event_screen_touch.h
+	event/event_screen_drag.h
+	event/event_mouse_button.h
+	event/event_mouse_motion.h
+	event/event_mouse_button_touch.h
+	error/error_list.h
+	error/error_macros.h
+	input/input.h
+	input/input_map.h
+	input/input_list.h
+	io/file_access.h
+	io/file_system.h
+	io/file_access_dock
+	io/resources.h
+	io/dir_access.h
+	io/http_client.h
+	io/http_server.h
+	io/file_utils.h
+	io/config_file.h
+	extension/extension.h
+	extension/extension_manager.h
+	os/os.h
 	os/time.h
 	os/thread.h,
 	os/thread_safe.h,

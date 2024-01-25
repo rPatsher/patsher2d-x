@@ -1,0 +1,27 @@
+{
+  "name": "patsher2d-x",
+  "version": "2.4.2",
+  "description": "a simple game engine development multi platform 2d and 3d with editor",
+  "main": "main.js",
+  "scripts": {
+    "test": "nu"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rPatsher/patsher2d-x.git"
+  },
+  "keywords": [
+    "2d",
+    "3d",
+    "game",
+    "engine",
+    "games",
+    "core"
+  ],
+  "author": "rPatsher",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rPatsher/patsher2d-x/issues"
+  },
+  "homepage": "https://github.com/rPatsher/patsher2d-x#readme"
+}

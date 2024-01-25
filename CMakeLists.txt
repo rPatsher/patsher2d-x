@@ -34,6 +34,10 @@ project(patsher2d-x VERSION 2.5)
 include(core/CMakeLists.txt)
 include(main/CMakeLists.txt)
 include(scene/CMakeLists.txt)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 # Include raylib if necessary
 
 # Targert Link Libs
@@ -47,7 +51,6 @@ if (NOT raylib_FOUND)
     FetchContent_MakeAvailable(raylib)
 endif()
 set(BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
-
 
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(GTK3 REQUIRED gtk+-3.0)

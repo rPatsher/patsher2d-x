@@ -28,13 +28,22 @@ SOFTWARE.
 #include "core/templates/hash_map.h"
 #include "core/templates/hash_set.h"
 #include "core/templates/vector.h"
-
+#include "core/object/m_object.h"
 
 #include <array>
 #include <list>
 
 static const LIST = std::list<std::string, *void>;
 static const int MAX_COUNT = 0;
+
+
+static void MClass::bind_methods() {
+	Object::bind_method("bind_static_method" , &MClass::bind_static_method);
+	Object::bind_method();
+}
+
+
+
 
 void MClass::add_compatibility_class(const std::string& className, const std::string& compatibleClass) {
     c_map[className].push_back(compatibleClass);

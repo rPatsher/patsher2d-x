@@ -364,6 +364,12 @@ public:
         }
         return nullptr;
     }
+    
+    
+protected:
+	static void bind_methods() {}
+	
+	
 #define D_METHOD(m_c, ...) m_c
 
 #define ADD_PROPERTY(m_type , m_name , m_method) \
