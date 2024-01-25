@@ -106,8 +106,8 @@ private:                                                                \
 public:                                                                            \
     static const char* get_class_name_static() { return #class_name; }              \
     virtual const char* get_class_name() const { return get_class_name_static(); } \
-    static MObject* get_class_ptr_static() { return _create(); }                   \
-    static MObject* get_class_static() { return _create(); }                       \
+    static Object* get_class_ptr_static() { return _create(); }                   \
+    static Object* get_class_static() { return _create(); }                       \
     static const std::vector<std::string>& get_inheritance_list_static() {           \
         static std::vector<std::string> inheritance_list = { #base_class_name };     \
         return inheritance_list;                                                   \
@@ -115,7 +115,7 @@ public:                                                                         
     static bool is_class(const char* class_name) {                                  \
         return (strcmp(class_name, #class_name) == 0) || is_base_class(class_name); \
     }                                                                               \
-    static bool is_class_ptr(const MObject* obj) {                                 \
+    static bool is_class_ptr(const Object* obj) {                                 \
         return dynamic_cast<const class_name*>(obj) != nullptr;                     \
     }                                                                               \
     static const std::vector<std::string>& get_valid_parents_static() {             \
@@ -144,7 +144,7 @@ public:                                                                         
         return _instance->_get_method_bind_impl();                                 \
     }                                                                               \
                                                                                    \
-    static MObject* _create() { return new class_name; }                           \
+    static Object* _create() { return new class_name; }                           \
                                                                                    \
     static void _bind_methods();                                                   \
                                                                                    \
@@ -180,8 +180,8 @@ public:
     std::map<std::string, std::string> get_from_property_map() const;
 
     // New functions
-    void get_obj_insert(const std::string& objKey, const MObject& objToInsert);
-    std::map<std::string, MObject> get_obj_map(const std::string& objKey) const;
+    void get_obj_insert(const std::string& objKey, const Object& objToInsert);
+    std::map<std::string, Object> get_obj_map(const std::string& objKey) const;
 
     // String manipulation functions
     size_t find(const std::string& substring) const;
@@ -215,11 +215,11 @@ public:
 
     void* allocate_memory(size_t size);    // Allocate dynamic memory
     void deallocate_memory(void* ptr);      // Deallocate dynamic memory
-    void copy_data_from(const MObject& other);  // Copy data from another MObject
+    void copy_data_from(const Object& other);  // Copy data from another Object
 
 
     template <typename T>
-    T static_cast_from(const MObject& obj);
+    T static_cast_from(const Object& obj);
 
     // New function for static memory information
     static size_t get_static_memory();
@@ -233,8 +233,8 @@ public:
     // New function to get the minimum property value in the object map
     int get_obj_min_property(const std::string& objKey, const std::string& propertyKey) const;
 
-    static MObject* get_static_ptr();
-    static void set_static_ptr(MObject* ptr);
+    static Object* get_static_ptr();
+    static void set_static_ptr(Object* ptr);
 
     // New functions for v
     int getv() const;
@@ -258,21 +258,32 @@ public:
     void zero_fill_memory(size_t size);      // Fill dynamic memory with zeros
     void set_memory_value(size_t offset, int value);  // Set a value at a specific offset in dynamic memory
     
+    
+    // Method binding functions
+    template <typename Func>
+    decltype(auto) bind_method(const std::string& method_name, Func&& func);
+
+    template <typename ReturnType, typename... Args>
+    decltype(auto) get_method(const std::string& method_name) const;
+    
+    
     int get_memory_value(size_t offset) const; // Get a value from a specific offset in dynamic memory
 
 protected:
     friend class RefCounted;
     friend class MClass;
+    friend class ClassDB;
+    friend class ObjectDB;
     friend class Extension;
 
 private:
     mutable std::map<std::string, int> dataMap; // Mutable to allow modification in const functions
     std::map<std::string, std::string> propertyMap;
     std::map<std::string, std::vector<std::string>> propertyArrayMap;
-    std::map<std::string, std::function<int(const MObject&)>> methodBindings;
+    std::map<std::string, std::function<int(const Object&)>> methodBindings;
 
     // New member variables for object insertion
-    std::map<std::string, MObject> objectMap;
+    std::map<std::string, Object> objectMap;
    // Unique pointer to dynamically allocated memory
     std::unique_ptr<char[]> dynamicMemory;
 
@@ -280,24 +291,27 @@ private:
     mutable std::map<std::string, int> variableMap;
 
     // New static pointer
-    static MObject* staticPointer;
-};
+    static Object* staticPointer;
+
 
 // Template implementation for get_method, bind_method, and emit_signal
 template <typename ReturnType, typename... Args>
-decltype(auto) MObject::get_method(const std::string& method_name) const {
+decltype(auto) Object::get_method(const std::string& method_name) const {
     auto it = methodBindings.find(method_name);
     if (it != methodBindings.end()) {
         return it->second;
     } else {
         // Default return if the method is not found
-        return [](const MObject&) -> ReturnType { return ReturnType(); };
+        return [](const Object
+        &) -> ReturnType { return ReturnType(); };
     }
 }
 
 template <typename Func>
-decltype(auto) MObject::bind_method(const std::string& method_name, Func&& func) {
+decltype(auto) Object::bind_method(const std::string& method_name, Func&& func) {
     methodBindings[method_name] = std::forward<Func>(func);
 }
+
+};
 
 #endif // M_OBJECT_H

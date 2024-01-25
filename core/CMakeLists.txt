@@ -51,10 +51,10 @@ include(variant/CMakeLists.txt)
 
 set(SOURCES
 	core_bind.cpp
-	core_bind.h,
-	register_core_types.cpp,
-	register_core_types.h,
-	version.gen.h,
+	core_bind.h
+	register_core_types.cpp
+	register_core_types.h
+	version.gen.h
 	typedefs.h
 )
 

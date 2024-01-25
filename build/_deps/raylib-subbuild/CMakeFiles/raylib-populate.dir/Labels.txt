@@ -1,0 +1,14 @@
+# Target labels
+ raylib-populate
+# Source files and their labels
+/root/Projects/patsher2d-x/build/_deps/raylib-subbuild/CMakeFiles/raylib-populate
+/root/Projects/patsher2d-x/build/_deps/raylib-subbuild/CMakeFiles/raylib-populate.rule
+/root/Projects/patsher2d-x/build/_deps/raylib-subbuild/CMakeFiles/raylib-populate-complete.rule
+/root/Projects/patsher2d-x/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-install.rule
+/root/Projects/patsher2d-x/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-mkdir.rule
+/root/Projects/patsher2d-x/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-download.rule
+/root/Projects/patsher2d-x/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-update.rule
+/root/Projects/patsher2d-x/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-patch.rule
+/root/Projects/patsher2d-x/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-configure.rule
+/root/Projects/patsher2d-x/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-build.rule
+/root/Projects/patsher2d-x/build/_deps/raylib-subbuild/raylib-populate-prefix/src/raylib-populate-stamp/raylib-populate-test.rule
