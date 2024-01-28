@@ -30,17 +30,14 @@ SOFTWARE.
 #include <cstdio>
 #include <cstdlib>
 
-#include <functional>
+#include <functional> // for std::function
 
 
-#include "core/string/ustring.h"
-#include "core/templates/hash_map.h"
-#include "core/templates/list.h"
-#include "core/templates/vector.h"
-#include "core/object/ref_counted.h"
-#include "core/error/error_list.h"
-
-#include "core/object/m_object.h"
+#include "core/string/ustring.h" // for String class
+#include "core/templates/vector.h" // for Vector<T> class 
+#include "core/object/ref_counted.h" // for RefCounted class
+#include "core/error/error_list.h" // for Error enum 
+#include "core/object/m_object.h" // for CLASS() macro to registeration class 
 
 
 /**
@@ -53,12 +50,22 @@ SOFTWARE.
 
 class FileAccess : public RefCounted {
 	CLASS(FileAccess , RefCounted);	
-	
+
+private:
+    std::string filename;
+    std::fstream file;
+    ModeFlags mode;
+    std::string lastError;
+
+
 public:
 	enum ModeFlags {
 		WRITE,
-		READ
+		READ,
+		WRITE_READ,
+		READ_WRITE
 	};
+
 public:
 	FileAccess();
 	virtual ~FileAccess();
@@ -68,11 +75,53 @@ public:
 	 * open the file
 	 * check if file is open !! 
 	 */
-	bool open(const String& path, ModeFlags mode);
+	bool open(const std::string& path, ModeFlags mode);
 	bool is_open() const;
 	
 	bool file_exists(const String& path) const;
 	bool write(const String& data);
+
+	bool open_compressed(const std::string& path, ModeFlags mode);
+	bool open_encrypted(const std::string& path, ModeFlags mode);
+
+	bool write_line_to_file(const std::string& line);
+	bool write_pascal_string_to_file(const std::string& pascalString);
+ 
+	bool write_var_to_file(const void* variable, size_t size);
+  bool write_16_to_file(uint16_t value);
+  
+	bool read(std::string& data);
+  bool get_line_from_file(std::string& line);
+    
+	bool store_string(const std::string& data);
+  bool get_var_from_file(void* variable, size_t size);
+  
+	bool get_hidden_attribute();
+
+	uint16_t get16();
+  
+	std::string get_file_path() const;
+  std::string get_open_error() const;
+  
+	std::vector<uint8_t> get_file_as_Bytes() const; 
+	std::string get_error() const;
+  
+	std::vector<std::string> get_csv_Line(char delimiter = ',');
+  
+	void close();
+  void flush();
+  
+	bool get8(uint8_t& value);
+  uint16_t get16();
+  
+	std::string get_as_text();
+	std::string get_file_as_string();
+
+	std::function<void()> get_create_func();
+
+
+	std::chrono::system_clock::time_point get_modified_time() const;
+	bool set_modified_time(const std::chrono::system_clock::time_point& newTime);
 	
 	/**
      *  Creates binary data from a file.
@@ -101,9 +150,12 @@ public:
 	
 	
 protected:
-	static void bind_methods() {} 
-};
+	static void _bind_methods() {} 
 
+
+
+
+};
 
 
 #endif // FILE_ACCESS_H

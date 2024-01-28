@@ -30,7 +30,7 @@ SOFTWARE.
 
 #include "thirdparty/logger/src/logger.h"
 #include "thirdparty/logger/src/loggerconf.h"
-
+#include "thirdparty/log/log.h"
 // Debug Log
 
 #define LOG(...)       do {} while (0)
@@ -39,13 +39,28 @@ SOFTWARE.
 #define WAR_LOG_WARN(...)   do {} while (0)
 
 // Args Templates
-#define CC_SAFE_DELETE(p)           do { delete (p); (p) = nullptr; } while(0)
-#define CC_SAFE_DELETE_ARRAY(p)     do { if(p) { delete[] (p); (p) = nullptr; } } while(0)
-#define CC_SAFE_FREE(p)             do { if(p) { free(p); (p) = nullptr; } } while(0)
-#define CC_SAFE_RELEASE(p)          do { if(p) { (p)->release(); } } while(0)
-#define CC_SAFE_RELEASE_NULL(p)     do { if(p) { (p)->release(); (p) = nullptr; } } while(0)
-#define CC_SAFE_RETAIN(p)           do { if(p) { (p)->retain(); } } while(0)
-#define CC_BREAK_IF(cond)           if(cond) break
+#define SAFE_DELETE(p)           do { delete (p); (p) = nullptr; } while(0)
+#define SAFE_DELETE_ARRAY(p)     do { if(p) { delete[] (p); (p) = nullptr; } } while(0)
+#define SAFE_FREE(p)             do { if(p) { free(p); (p) = nullptr; } } while(0)
+#define SAFE_RELEASE(p)          do { if(p) { (p)->release(); } } while(0)
+#define SAFE_RELEASE_NULL(p)     do { if(p) { (p)->release(); (p) = nullptr; } } while(0)
+#define SAFE_RETAIN(p)           do { if(p) { (p)->retain(); } } while(0)
+#define BREAK_IF(cond)           if(cond) break
+
+
+#define ERR_PRINT(fmt, ...) \ 
+      log_error("ERROR: " fmt, ##__VA_ARGS__);
+
+
+#define ERR_WARN(fmt , ...) \ 
+      log_warn("WARN: " fmt , ##__VA_ARGS__);
+
+
+#define ERR_WARN(fmt , ...)  \ 
+      log_info("INFO: " fmt, ##__VA_ARGS__);
+
+
+
 
 
 	

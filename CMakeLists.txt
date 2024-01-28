@@ -1,5 +1,5 @@
 #/*
- #* renderer.cpp
+#* CMakeLists.txt
  #* 
  #* Copyright 2024 Unknown <rPatsher@localhost>
  #* 
@@ -30,18 +30,23 @@ project(patsher2d-x VERSION 2.5)
 
 
 
-#
+# Include Engine Sources
 include(core/CMakeLists.txt)
 include(main/CMakeLists.txt)
 include(scene/CMakeLists.txt)
+include(servers/CMakeLists.txt)
+include(editor/CMakeLists.txt)
+include(external/CMakeLists.txt)
+include(thirdparty/CMakeLists.txt)
+include(tools/CMakeLists.txt)
+include(drivers/CMakeLists.txt)
+include(resources/CMakeLists.txt)
+include(module/CMakeLists.txt)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Include raylib if necessary
-
-# Targert Link Libs
-
+# Build RayLib And Link Ray With Patsher2DX
 include(FetchContent)
 if (NOT raylib_FOUND)
     FetchContent_Declare(
@@ -50,9 +55,15 @@ if (NOT raylib_FOUND)
     )
     FetchContent_MakeAvailable(raylib)
 endif()
-set(BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+
+set(BUILD_PATSHER2DX OFF CACHE BOOL "" FORCE)
+
 
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
 
 
+
+
+
+add_executable(main main/main.cpp)
