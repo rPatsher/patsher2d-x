@@ -1,10 +1,15 @@
 #include "dir_access.h"
 
+#include "core/io/file_system.h" 
+#include "core/templates/vector.h"
+#include "core/string/ustring.h" 
+
+#include <filesystem>
+#include <thread>
 
 
-
-std::vector<std::string> DirAccess::get_directories() const {
-    std::vector<std::string> directories;
+Vector<String> DirAccess::get_directories() const {
+    Vector<String> directories;
 
     for (const auto& entry : std::filesystem::directory_iterator(basePath)) {
         if (entry.is_directory()) {
@@ -15,12 +20,14 @@ std::vector<std::string> DirAccess::get_directories() const {
     return directories;
 }
 
-bool DirAccess::remove(const std::string& name) const {
+bool DirAccess::remove(const String& name) const {
     std::filesystem::path itemPath = basePath / name;
 
     // Check if the item exists
     if (!std::filesystem::exists(itemPath)) {
+        ERR_PRINT("Item does not exist\n" , itemPath);
         return false; // Item does not exist
+        
     }
 
     // Perform the removal
@@ -38,7 +45,7 @@ bool DirAccess::remove(const std::string& name) const {
 }
 
 
-bool DirAccess::rename(const std::string& from, const std::string& to) const {
+bool DirAccess::rename(const String& from, const String& to) const {
     std::filesystem::path source = basePath / from;
     std::filesystem::path destination = basePath / to;
 
@@ -58,7 +65,7 @@ bool DirAccess::rename(const std::string& from, const std::string& to) const {
 }
 
 
-bool DirAccess::change_dir(const std::string& dir) {
+bool DirAccess::change_dir(const String& dir) {
     std::filesystem::path newDir = basePath / dir;
 
     // Check if the new directory exists
@@ -70,23 +77,21 @@ bool DirAccess::change_dir(const std::string& dir) {
     return true;
 }
 
-DirAccess DirAccess::create_for_path(const std::string& path) {
+DirAccess DirAccess::create_for_path(const String& path) {
     return DirAccess(path);
 }
 
 
-
-
-bool DirAccess::dir_exists_absolute(const std::string& dirPath) const {
+bool DirAccess::dir_exists_absolute(const String& dirPath) const {
     std::filesystem::path absoluteDirPath = std::filesystem::absolute(dirPath);
     return std::filesystem::exists(absoluteDirPath) && std::filesystem::is_directory(absoluteDirPath);
 } 
 
 
 
-std::vector<std::string> DirAccess::get_directories_at(const std::string& dirPath) const {
+Vector<String> DirAccess::get_directories_at(const String& dirPath) const {
     std::filesystem::path targetPath = basePath / dirPath;
-    std::vector<std::string> directories;
+    Vector<String> directories;
 
     if (std::filesystem::exists(targetPath) && std::filesystem::is_directory(targetPath)) {
         for (const auto& entry : std::filesystem::directory_iterator(targetPath)) {

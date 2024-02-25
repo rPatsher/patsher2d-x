@@ -26,36 +26,61 @@ SOFTWARE.
 
 
 #include "core/typedefs.h"
-#include <alsa/control.h>
-
-#include <cstdlib>
-#include <csignal>
-#include <list>
-#include <list.h>
-
-#include <string>
-
-#include <core/string/string.h>
-#include <core/object/object_db.h>
+#include "core/templates/vector.h"
+#include "core/error/error_macros.h"
 
 
-struct Signleton {
-    char* object;
-    int* count;
-    void* item;
-    String name;
-};
+
+class String;
+class Object;
+
 
 class Engine {
-
+public:
+	struct Signleton {
+    	char* object;
+    	int* count;
+    	void* item;
+    	String name;
+    	Singleton(const String &p_name = String(), Object *p_ptr = nullptr, const String &p_class_name = String());
+	};
+	};
 
 private:
     int fps;
     int p_target;
     bool hint;
-    std::list<std::string>* p_list;
+    List<String>* p_list;
     double p_sec;
     double p_time;
+    uint64_t frames_drawn = 0;
+	uint32_t _frame_delay = 0;
+	uint64_t _frame_ticks = 0;
+	double _process_step = 0;
+
+	int ips = 60;
+	double physics_jitter_fix = 0.5;
+	double _fps = 1;
+	int _max_fps = 0;
+	int _audio_output_latency = 0;
+	double _time_scale = 1.0;
+	uint64_t _physics_frames = 0;
+	int max_physics_steps_per_frame = 8;
+	double _physics_interpolation_fraction = 0.0f;
+	bool abort_on_gpu_errors = false;
+	bool use_validation_layers = false;
+	bool generate_spirv_debug_info = false;
+	int32_t gpu_idx = -1;
+
+	uint64_t _process_frames = 0;
+	bool _in_physics = false;
+
+	List<Singleton> singletons;
+	HashMap<String, Object *> singleton_ptrs;
+
+	bool editor_hint = false;
+	bool project_manager_hint = false;
+	bool extension_reloading = false;
 
 public:
     static Engine* get_signleton();
@@ -66,23 +91,43 @@ public:
     void SetFpsTargert(int p_fps);
     double GetFrameTime(void) const;
 
-    bool IsEditorHint(void) const;
-    bool IsHint(void) const;
+    bool is_editor_hint(void) const;
+    bool is_hint(void) const;
 
     bool _is_class_enabled() const;
+    
 
     void wiat_time(double seconds);
     void swap_screen_buffer();
     void set_randoom_seed(unsigned int seed);
 
     void set_randoom_value(int min , int max);
+	
+	uint64_t get_physics_frames() const { return _physics_frames; }
+	uint64_t get_process_frames() const { return _process_frames; }
+	bool is_in_physics_frame() const { return _in_physics; }
+	uint64_t get_frame_ticks() const { return _frame_ticks; }
+	double get_process_step() const { return _process_step; }
+	double get_physics_interpolation_fraction() const { return _physics_interpolation_fraction; }
+
+	void set_time_scale(double p_scale);
+	double get_time_scale() const;
+
+	void set_print_error_messages(bool p_enabled);
+	bool is_printing_error_messages() const;
+
+	void set_frame_delay(uint32_t p_msec);
+	uint32_t get_frame_delay() const;
+
+	void add_singleton(const Singleton &p_singleton);
+	void get_singletons(List<Singleton> *p_singletons);
+	bool has_singleton(const String &p_name) 
 
 
-
-    void SetPropertyList(const std::list<std::string>* p_list) const;
-    std::list<std::string> GetPropertyList(void) const;
+    void set_property_list(const List<String>* p_list) const;
+    List<String> get_property_list(void) const;
 protected:
-    static void bind_methods();
+    static void _bind_methods();
     friend class ProjectSettings;
     friend class Main;
 

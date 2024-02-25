@@ -1,73 +1,93 @@
+/**
+ * MIT License
+
+Copyright (c) 2024/2025 rPatsher
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
 #include "m_object.h"
+
+
+#include "core/template/pair.h"
+#include "core/variant/variant.h"
+#include "core/variant/dictionary.h"
+#include "core/variant/array.h"
+
 #include <cstdlib>
 
-// Static pointer initialization
-MObject* MObject::staticPointer = nullptr;
 
-// Constructor
-MObject::MObject() {
-    // Initialization if needed
+
+Object::Object() {
+    
 }
 
-// Destructor
-MObject::~MObject() {
-    // Cleanup if needed
+Object::~Object() {
+
 }
 
 // Const version: Get the value for a given key
-int MObject::get(const std::string& key) const {
-    // If the key is not found, return a default value (0 in this case)
+int Object::get(const String& key) const {
     auto it = dataMap.find(key);
-    return (it != dataMap.end()) ? it->second : 0;
+    return (it != dataMap.end()) ? it->value : 0;
 }
 
-// Const version: Set the value for a given key
-void MObject::set(const std::string& key, int value) const {
-    // Using const_cast to allow modification in a const function
-    const_cast<std::map<std::string, int>&>(dataMap)[key] = value;
+void Object::set(const String& key, int value) const {
+    const_cast<std::map<String, int>&>(dataMap)[key] = value;
 }
 
-// Get the property for a given key
-std::string MObject::get_property(const std::string& key) const {
+String Object::get_property(const String& key) const {
     auto it = propertyMap.find(key);
-    return (it != propertyMap.end()) ? it->second : "";
+    return (it != propertyMap.end()) ? it->value : "";
 }
 
-MObject::zero_fill_memory(size_t size) {
+Object::zero_fill_memory(size_t size) {
     if (dynamicMemory) {
         std::memset(dynamicMemory.get(), 0, size);
     }
 }
 
-// Memory-related function: Set a value at a specific offset in dynamic memory
-void MObject::set_memory_value(size_t offset, int value) {
+void Object::set_memory_value(size_t offset, int value) {
     if (dynamicMemory) {
         int* memoryInt = reinterpret_cast<int*>(dynamicMemory.get() + offset);
         *memoryInt = value;
     }
 }
 
-// Memory-related function: Get a value from a specific offset in dynamic memory
-int MObject::get_memory_value(size_t offset) const {
+int Object::get_memory_value(size_t offset) const {
     if (dynamicMemory) {
         const int* memoryInt = reinterpret_cast<const int*>(dynamicMemory.get() + offset);
         return *memoryInt;
     }
-    return 0; // Default value if dynamic memory is not allocated
+    return 0; 
 }
 
-// Get the property array for a given key
-std::vector<std::string> MObject::get_property_array(const std::string& key) const {
+std::vector<String> Object::get_property_array(const String& key) const {
     auto it = propertyArrayMap.find(key);
-    return (it != propertyArrayMap.end()) ? it->second : std::vector<std::string>();
+    return (it != propertyArrayMap.end()) ? it->value : std::vector<String>();
 }
 
 // Get and set properties with a single function call
-std::string MObject::getset(const std::string& key, const std::string& value) {
+String Object::getset(const String& key, const String& value) {
     if (!value.empty()) {
         // If value is provided, set the property and return the previous value
         auto it = propertyMap.find(key);
-        std::string previousValue = (it != propertyMap.end()) ? it->second : "";
+        String previousValue = (it != propertyMap.end()) ? it->value : "";
         propertyMap[key] = value;
         return previousValue;
     } else {
@@ -76,50 +96,48 @@ std::string MObject::getset(const std::string& key, const std::string& value) {
     }
 }
 
-void MObject::setget(const std::string& key, const std::string& value) {
+void Object::setget(const String& key, const String& value) {
     // Set the property value
     propertyMap[key] = value;
 }
 
 // Get the class name from the property map
-std::string MObject::get_class_name() const {
+String Object::get_class_name() const {
     return get_property("class_name");
 }
 
 // Get a copy of the property map
-std::map<std::string, std::string> MObject::get_from_property_map() const {
+std::map<String, String> Object::get_from_property_map() const {
     return propertyMap;
 }
 
 // Insert an object into the object map
-void MObject::get_obj_insert(const std::string& objKey, const MObject& objToInsert) {
+void Object::get_obj_insert(const String& objKey, const Object& objToInsert) {
     objectMap[objKey] = objToInsert;
 }
 
 // Get a map of objects associated with a key
-std::map<std::string, MObject> MObject::get_obj_map(const std::string& objKey) const {
+std::map<String, Object> Object::get_obj_map(const String& objKey) const {
     auto it = objectMap.find(objKey);
-    return (it != objectMap.end()) ? std::map<std::string, MObject>{{objKey, it->second}} : std::map<std::string, MObject>();
+    return (it != objectMap.end()) ? std::map<String, Object>{{objKey, it->value}} : std::map<String, Object>();
 }
 
 
 
 
-MObject::allocate_memory(size_t size) {
+Object::allocate_memory(size_t size) {
     dynamicMemory = std::make_unique<char[]>(size);
     return dynamicMemory.get();
 }
 
-// Memory-related function: Deallocate dynamic memory
-void MObject::deallocate_memory(void* ptr) {
-    // Check if the provided pointer matches the dynamic memory pointer
+void Object::deallocate_memory(void* ptr) {
     if (ptr == dynamicMemory.get()) {
-        dynamicMemory.reset(); // Deallocate memory by resetting the unique pointer
+        dynamicMemory.reset(); 
     }
 }
 
-// Memory-related function: Copy data from another MObject
-void MObject::copy_data_from(const MObject& other) {
+// Memory-related function: Copy data from another Object
+void Object::copy_data_from(const Object& other) {
     // Check if both objects have allocated dynamic memory
     if (dynamicMemory && other.dynamicMemory) {
         // Copy data from 'other' to the current object
@@ -127,56 +145,50 @@ void MObject::copy_data_from(const MObject& other) {
     }
 }
 
-MObject::get_obj_max_property(const std::string& objKey, const std::string& propertyKey) const {
+Object::get_obj_max_property(const String& objKey, const String& propertyKey) const {
     auto it = objectMap.find(objKey);
     if (it != objectMap.end()) {
-        const MObject& obj = it->second;
+        const Object& obj = it->value;
         auto objIt = obj.dataMap.find(propertyKey);
         if (objIt != obj.dataMap.end()) {
-            return objIt->second;
+            return objIt->value;
         }
     }
-    return 0; // Default value if the object or property is not found
+    return 0; 
 }
-
-// New function to get the minimum property value in the object map
-int MObject::get_obj_min_property(const std::string& objKey, const std::string& propertyKey) const {
+int Object::get_obj_min_property(const String& objKey, const String& propertyKey) const {
     auto it = objectMap.find(objKey);
     if (it != objectMap.end()) {
-        const MObject& obj = it->second;
+        const Object& obj = it->value;
         auto objIt = obj.dataMap.find(propertyKey);
         if (objIt != obj.dataMap.end()) {
-            return objIt->second;
+            return objIt->value;
         }
     }
-    return 0; // Default value if the object or property is not found
+    return 0;
 }
 
 
-// String manipulation functions
-size_t MObject::find(const std::string& substring) const {
-    // Example implementation, you might need to customize based on your requirements
-    std::string concatenatedData;
+size_t Object::find(const String& substring) const {
+    String concatenatedData;
     for (const auto& entry : dataMap) {
-        concatenatedData += std::to_string(entry.second);
+        concatenatedData += std::to_string(entry.value);
     }
     return concatenatedData.find(substring);
 }
 
-size_t MObject::rfind(const std::string& substring) const {
+size_t Object::rfind(const String& substring) const {
     // Example implementation, you might need to customize based on your requirements
-    std::string concatenatedData;
+    String concatenatedData;
     for (const auto& entry : dataMap) {
-        concatenatedData += std::to_string(entry.second);
+        concatenatedData += std::to_string(entry.value);
     }
     return concatenatedData.rfind(substring);
 }
 
-// Null and validity checks
-bool MObject::is_null() const {
+bool Object::is_null() const {
     return dataMap.empty() && propertyMap.empty() && propertyArrayMap.empty() && objectMap.empty();
 }
 
-bool MObject::is_valid() const {
-    // Example implementation, you might need to customize based on your requirements
+bool Object::is_valid() const {
     return !is_null();

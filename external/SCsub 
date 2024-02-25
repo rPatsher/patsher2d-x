@@ -1,0 +1,6 @@
+#SCsub
+
+Import('env')
+
+source_files = Glob('*.cpp')
+env.add_source_files(source_files)

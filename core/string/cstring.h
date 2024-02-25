@@ -28,11 +28,11 @@ SOFTWARE.
 
 #include <cstdio>
 #include <cstdlib>
-
-
-
 #include <string>
 #include <vector>
+
+
+#include "core/templates/vector.h"
 
 class CString {
 private:

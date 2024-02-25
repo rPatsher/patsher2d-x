@@ -25,77 +25,76 @@ SOFTWARE.
 #ifndef DICTIONARY_H
 #define DICTIONARY_H
 
-#include <thirdparty/logger/src/logger.h>
 #include <unordered_map>
-#include <string>
-#include <vector>
 #include <initializer_list>
 
+#include "core/error/error_macros.h"
+#include "core/string/ustring.h"
+#include "core/templates/vector.h"
 
-template <typename T>
 class Dictionary {
 public:
     Dictionary();
-    Dictionary(const std::initializer_list<std::pair<const std::string, T>>& initList);
+    Dictionary(const std::initializer_list<std::pair<const String, T>>& initList);
 
 public:
-    void insert(const std::string& key, const T& value);
-    bool contains(const std::string& key) const;
-    T& get(const std::string& key);
+    void insert(const String& key, const T& value);
+    bool contains(const String& key) const;
+    T& get(const String& key);
 
-    void ref(const std::string& key);
-    void unref(const std::string& key);
+    void ref(const String& key);
+    void unref(const String& key);
 
 
-    void remove(const std::string& key);
+    void remove(const String& key);
     size_t size() const;
 
     bool empty() const;
     void clear();
 
-    void push_back(const std::string& key, const T& value);
-    void error(const std::string& message) const;
+    void push_back(const String& key, const T& value);
+    void error(const String& message) const;
 
-    bool has(const std::string& key) const;
-    bool has_all(const std::vector<std::string>& keys) const;
+    bool has(const String& key) const;
+    bool has_all(const Vector<String>& keys) const;
 
-    void Dictionary<T>::erase(const std::string& key);
+    void Dictionary erase(const String& key);
 
-    T& get_valid(const std::string& key, const T& default_value) const;
-    std::string find_key(const T& value) const;
+    Variant get_valid(const String& key, const T& default_value) const;
+    String find_key(const T& value) const;
 
     bool is_empty() const;
-    void merge(const Dictionary<T>& other);
+    void merge(const Dictionary& other);
 
-    std::vector<std::string> keys() const;
-    std::vector<T> values() const;
+    Vector<String> keys() const;
+    Vector<T> values() const;
 
-    void append(const std::string& key, const T& value);
+    void append(const String& key, const T& value);
     void duplicate(const Dictionary& other);
 
 
     bool is_read_only() const;
-    T& get_valid(const std::string& key, const T& default_value) const;
+    T& get_valid(const String& key, const T& default_value) const;
 
     const T& get_value_at_index(size_t index) const;
-    T& get_or_add(const std::string& key, const T& default_value);
+    T& get_or_add(const String& key, const T& default_value);
 
-    T& operator[](const std::string& key);
-    const T& operator[](const std::string& key) const;
+    Dictionary operator[](const String& key);
+    Variant operator[](const String& key) const;
 
-    T& get(const std::string& key);
-    T* getptr(const std::string& key);
+    Variant get(const String& key);
+    Variant getptr(const String& key);
 
-    std::string id() const;
+    String id() const;
     size_t size() const;
 
-    std::vector<std::string> get_key_list() const;
-    std::string get_key_at_index(size_t index) const;
+    Vector<String> get_key_list() const;
+    String get_key_at_index(size_t index) const;
 
     bool operator==(const Dictionary<T>& other) const;
     bool operator!=(const Dictionary<T>& other) const;
 private:
-    std::unordered_map<std::string, T> data;
+    std::unordered_map<String, Variant> data;
     bool read_only = false;
 };
 

@@ -27,116 +27,120 @@ SOFTWARE.
 
 
 
-#include <core/error/error_list.h>
-#include <core/string/string.h>
-#include <core/object/ref_counted.h>
-#include <core/object/m_class.h>
-#include <core/typedefs.h>
-#include <scene/main/viewport.h>
+#include "core/string/ustring.h"
+#include "core/templates/pair.h"
+#include "core/templates/vector.h"
+#include "core/templates/list.h"
 
+class Node;
+class Object;
+class RefCounted;
+class Class;
+class Vector2;
 
 #include <cstring>
 #include <cstdlib>
+#include <pair>
 
+#include <SDL.h>
 
-
-class Window : public Viewport {
-    MCLASS(Window , Viewport);
+class Window : public Node {
+    CLASS(Window , Node);
 
 
 public:
-    enum class Mode {
+    enum Mode {
         MODE_WINDOW_BEGIN_LEFT,
-        MODE_WINDOW_BEGIN_RIGHT
-
+        MODE_WINDOW_BEGIN_RIGHT,
+        MODE_WINDOW_MODE_WINDOWED,
+    	MODE_WINDOW_MODE_FULLSCREEN_DESKTOP,
+    	MODE_WINDOW_MODE_BORDERLESS
     };
 
-    enum class Flags {
+    enum Flags {
         FLAGS_WINDOW_FULLSCREEN = ConfigFlags::FLAG_FULLSCREEN_MODE,
         FLAGS_WINDOW_HINT = ConfigFlags::FLAG_VSYNC_HINT,
         FLAGS_WINDOW_MSAA_4X = ConfigFlags::FLAG_MSAA_4X_HINT,
         FLAGS_WINDOW_RESIZED = ConfigFlags::FLAG_WINDOW_RESIZABLE,
         FLAGS_WINDOW_MAXRESIZED = ConfigFlags::FLAG_WINDOW_MAXIMIZED,
-        FLAGS_WINDOW_MINIRESIZED = ConfigFlags::FLAG_WINDOW_MINIMIZED
-
-
+        FLAGS_WINDOW_MINIRESIZED = ConfigFlags::FLAG_WINDOW_MINIMIZED,
+        FLAGS_WINDOW_FLAG_POPUP = SDL_WINDOW_POPUP
     };
-private:
-    int width;
-    int height;
-    bool initialize;
-    bool visible;
-    bool p_actived;
-    char* title;
-
 public:
-    static Window* init(const int width, const int height , const char* p_title);
+	struct Matrix4 {
+		float elements[4][4];
+	};
+	
+	Matrix4 get_screen_transform_internal(bool p_absolute_position) const;
+	
+public:
+    void init(const int width, const int height , const char* p_title);
     Window get_init() const;
-
+    void close();
+    bool is_init() const;
+    void reset_size();
+    void move_to_center();
     void set_title(const char* p_title);
     char* get_title() const;
-
     void set_mode(Mode mode) const;
     Mode get_mode() const;
-
     void set_flags(Flags flags) const;
     Flags get_flags() const;
-
     void set_actived(bool active) const;
     bool get_actived() const;
-
     void set_visible(bool p_visible) const;
     bool get_visible() const;
-
     void show();
     void hide();
-
-
-    void update() const; // update parameter of window class
-    void update_pos() const; // Auto update the window pos 
-
+	void popup(const Vector2& p_screen_rect);
+    void popup_centered_ratio(float p_ratio);
+    void update() const; 
+    void update_pos() const; 
     void set_size(const int p_width , const int p_height);
     Vector2 get_size() const;
-
     void set_position(const int x , const int y);
     Vector2 get_position() const;
-
     int get_dpi_width() const;
     int get_dpi_height() const;
-
     void set_icon(const Ref<Image> image);
     Image get_icon() const;
-
-    int get_screen_width() const; // Get current screen width
+    int get_screen_width() const; 
     int get_screen_height() const;
-
     void is_window_closed() const;
     bool is_window_shold_closed() const;
-
     bool is_window_ready() const;
     bool is_window_hide() const;
-
-
+	std::pair<int, int> get_size() const;
+    std::pair<int, int> get_size_with_decorations() const;
+    std::pair<int, int> get_position() const;
     void get_scale_dpi() const;
-
-    void set_max_size(const int width, const int height); // Set window minimum dimensions (FLAG_WINDOW_RESIZABLE)
+    void set_max_size(const int width, const int height); 
     void set_mix_size(const int width , const int height);
-
+	int get_current_screen() const;
+    void set_current_screen(int screenIndex);
+    
     
 
 protected:
     friend class Viewport;
+    friend class Node;
+    void _bind_methods() {}
 
-
+private:
+	SDL_Window* window;
+    SDL_Renderer* renderer;
+    bool running;
+    Mode p_mode;
+    int currentScreen;
+    int originalWidth;
+    int originalHeight;
+    bool visible;
+    bool active;
+    char* title;
 public:
     Window();
     ~Window();
 
-
-
-//BIND_ENUM(Window::Mode, MODE_WINDOW_BEGIN_LEFT);
-//BIND_ENUM(Window::Mode, MODE_WINDOW_BEGIN_RIGHT);
-
 };
 
-#endif
+#endif // WINDOW_H

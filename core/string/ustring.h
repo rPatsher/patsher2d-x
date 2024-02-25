@@ -34,18 +34,10 @@ public:
     // Match methods
     bool match(const String& sub) const;
     bool matchn(const String& sub, int pos) const;
-
-    // Check if string begins or ends with a substring
     bool begins_with(const String& prefix) const;
     bool ends_with(const String& suffix) const;
-
-    // Check if the string is enclosed between two substrings
     bool is_enclosed_in(const String& prefix, const String& suffix) const;
-
-    // Format the string by replacing placeholders
     String format(const String& replacement) const;
-
-    // Replace occurrences of a specified substring
     String replace(const String& target, const String& replacement) const;
 
     // Replace the first occurrence of a specified substring
@@ -75,11 +67,44 @@ public:
     // Reverse the string
     String reverse() const;
 
+    void c_str();
+
+    int substr(int pos , int p_pos) const;
+
     // Convert the string to a numeric value
     double num() const;
 
     // Get the character at a specified position
     char chr(int pos) const;
+    
+    similarity(const String &p_string) const;
+	String format(const Variant &values, const String &placeholder = "{_}") const;
+	String replace_first(const String &p_key, const String &p_with) const;
+	String replace(const String &p_key, const String &p_with) const;
+	String replace(const char *p_key, const char *p_with) const;
+	String replacen(const String &p_key, const String &p_with) const;
+	String repeat(int p_count) const;
+	String reverse() const;
+	String insert(int p_at_pos, const String &p_string) const;
+	String erase(int p_pos, int p_chars = 1) const;
+	String pad_decimals(int p_digits) const;
+	String pad_zeros(int p_digits) const;
+	String trim_prefix(const String &p_prefix) const;
+	String trim_suffix(const String &p_suffix) const;
+	String lpad(int min_length, const String &character = " ") const;
+	String rpad(int min_length, const String &character = " ") const;
+	String sprintf(const Array &values, bool *error) const;
+	String quote(const String &quotechar = "\"") const;
+	String unquote() const;
+	static String num(double p_num, int p_decimals = -1);
+	static String num_scientific(double p_num);
+	static String num_real(double p_num, bool p_trailing = true);
+	static String num_int64(int64_t p_num, int base = 10, bool capitalize_hex = false);
+	static String num_uint64(uint64_t p_num, int base = 10, bool capitalize_hex = false);
+	static String chr(char32_t p_char);
+	static String md5(const uint8_t *p_md5);
+	static String hex_encode_buffer(const uint8_t *p_buffer, int p_len);
+	Vector<uint8_t> hex_decode() const;
 
     // Overloaded operators
     String& operator=(const String& other);
@@ -116,15 +141,11 @@ public:
     
     // Check if the current string is a subsequence of another string
     bool is_subsequence_of(const String& other) const;
-
+    
 private:
     // Helper method to check if the current string is a subsequence of another string starting from a specific position
     bool is_subsequence_from_position(const String& other, int startPos) const;
-    
-    // Split the string into a vector of substrings
     Vector<String> split(const String& p_splitter = "", bool p_allow_empty = true, int p_maxsplit = 0) const;
-
-    // Split the string from the right into a vector of substrings
     Vector<String> rsplit(const String& p_splitter = "", bool p_allow_empty = true, int p_maxsplit = 0) const;
 
     // Macros for stringifying identifiers
@@ -133,6 +154,10 @@ private:
 
     // Friend function to overload the << operator for output
     friend std::ostream& operator<<(std::ostream& os, const String& s);
+
+    enum {
+    	npos = -1
+    };
 };
 
 #endif // STRING_H

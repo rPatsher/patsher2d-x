@@ -1,0 +1,9 @@
+#!/usr/bin/env python
+
+Import('env')
+
+# Main program source files
+source_files = Glob('*.cpp')
+
+# Add Source Files 
+env.add_source_files(source_files)

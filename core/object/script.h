@@ -25,42 +25,23 @@ SOFTWARE.
 #define SCRIPT_H
 
 
-#include <core/object/ref_counted.h>
-#include <core/object/m_class.h>
-#include <core/string/string.h>
-#include <core/variant/dictionary.h>
+#include "core/object/ref_counted.h"
+#include "core/object/m_class.h"
+#include "core/string/ustring.h"
+#include "core/variant/dictionary.h"
+#include "core/templates/hash_set.h"
+#include "core/templates/map.h"
+#include "core/templates/typed_array.h"
 
-// lua Script 
-#include <thirdparty/lua/lua.hpp>
-#include <thirdparty/luacpp/Source/LuaCpp.hpp>
-#include <core/templates/hash_map.h>
-#include <core/templates/hash_set.h>
-#include <core/templates/map.h>
-#include <core/templates/typed_array.h>
 
 #include <cstring>
 #include <array>
 #include <cassert>
 
 
-using namespace LuaCpp;
-using namespace LuaCpp::Registry;
-using namespace LuaCpp::Engine;
-
 
 class Script : public RefCounted {
-
-private:
-    Ref<Script> script;
-    bool can_init;
-    String code;
-    String name;
-    Dictionary<String>* p_type;
-    LuaCpp::LuaContext* p_lua;
-    LuaCpp::LuaMetaObject* obj;
-    
-    Ref<lua_State> L;
-
+	CLASS(Script, RefCounted);
 
 public:
     static void can_init();
@@ -72,13 +53,22 @@ public:
     String get_script_name() const;
 
 
+protected:
+	void _bind_methods();
 
 
-public: 
-    Script();
+private:
+    Ref<Script> script;
+    bool can_init;
+    String code;
+    String name;
+    Dictionary p_type;
+    
+    
+    
+public:
+	Script();
     ~Script();
-
-
 };
 
 

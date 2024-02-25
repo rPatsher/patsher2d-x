@@ -1,7 +1,7 @@
 /*
  * config_file.cpp
  * 
- * Copyright 2024 Unknown <rPatsher@localhost>
+ * Copyright 2024 Patsher
  * 
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,21 +24,13 @@
 
 #include "config_file.h"
 
-#include <list>
-#include <variant>
 #include "core/object/ref_counted.h"
-#include "modules/mic/src/mic.h"
+#include "core/templates/key_value.h"
+#include "core/templates/map.h"
+#include "core/error/error_macros.h"
 
-ConfigFile::ConfigFile()
-{
-	
-}
-
-
-ConfigFile::~ConfigFile()
-{
-	
-}
+#include <fstream>
+#include <sstream>
 
 
 

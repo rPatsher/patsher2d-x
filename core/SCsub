@@ -1,0 +1,62 @@
+
+Import('env')
+
+
+core_sources = []
+
+
+thirdparty_obj = []
+
+env_thirdparty = env.Clone()
+env_thirdparty.disable_warnings()
+
+# Enet 
+thirdparty_enet_dir = '/thirdparty/net/'
+thirdparty_enet_src = '/thirdparty/net/enet.h'
+
+# RayLib
+thirdparty_raylib_dir = "/thirdparty/libgl/"
+thirdparty_raylib_src = [
+	"/thirdparty/libgl/raylib.h",
+	"/thirdparty/libgl/rlgl.h",
+	"/thirdparty/libgl/rcore.h",
+	"/thirdparty/libgl/rcamera.h",
+	"/thirdparty/libgl/config.h",
+	"/thirdparty/libgl/rglfw.h",
+	"/thirdparty/libgl/utils.c",
+	"/thirdparty/libgl/utils.h"
+]
+
+# Raylib Platforms
+thirdparty_raylib_platform_dir = "/thirdparty/libgl/platforms/"
+
+thirdparty_raylib_platform_src = [
+	"/thirdparty/libgl/platforms/rcore_android.c",
+	"/thirdparty/libgl/platforms/rcore_desktop.c",
+	"/thirdparty/libgl/platforms/rcore_web.c",
+	"/thirdparty/libgl/platforms/rcore_desktop_sdl.c",
+	"/thirdparty/libgl/platforms/rcore_template.c"	
+]
+
+
+
+# SCsub
+SConscript("os/SCsub")
+SConscript("math/SCsub")
+SConscript("io/SCsub")
+SConscript("debug/SCsub")
+SConscript("input/SCsub")
+SConscript("variant/SCsub")
+SConscript("extension/SCsub")
+SConscript("object/SCsub")
+SConscript("templates/SCsub")
+SConscript("string/SCsub")
+SConscript("config/SCsub")
+SConscript("error/SCsub")
+
+
+# Build it all as a library
+lib = env.add_library("core", env.core_sources)
+env.Prepend(LIBS=[lib])
+
+env.Depends(lib, thirdparty_obj)

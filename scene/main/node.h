@@ -196,7 +196,8 @@ public:
     virtual float get_scale_y() const;
 
 
-
+protected:
+	// 
 
 
 public:

@@ -119,7 +119,7 @@ public:
     const T* get_array_data() const {
         return get_data();
     }
-
+};
 // Get the data array
 template <typename T>
 const T* Vector<T>::get_data() const {
@@ -133,78 +133,6 @@ const T* Vector<T>::get_data() const {
     return dataArray;
 }
 
-void clear() {
-        while (size > 0) {
-            pop_back();
-        }
-    }
-
-    // Check if the vector is empty
-    bool empty() const {
-        return size == 0;
-    }
-
-    // Resize the vector to a specified size
-    void resize(size_t newSize, const T& value = T()) {
-        while (size < newSize) {
-            push_back(value);
-        }
-        while (size > newSize) {
-            pop_back();
-        }
-    }
-
-    // Reserve space for a specified capacity
-    void reserve(size_t newCapacity) {
-        if (newCapacity > capacity) {
-            Node* newData = new Node[newCapacity];
-            for (size_t i = 0; i < size; ++i) {
-                newData[i].data = data[i].data;
-                newData[i].next = &newData[i + 1];
-            }
-            newData[size - 1].next = nullptr;
-            delete[] data;
-            data = newData;
-            capacity = newCapacity;
-        }
-    }
-
-    // Shrink the vector's capacity to fit its size
-    void shrink_to_fit() {
-        if (size < capacity) {
-            reserve(size);
-        }
-    }
-
-    // Insert elements at a specific position
-    Iterator insert(Iterator position, const T& value) {
-        if (position.current == nullptr) {
-            push_back(value);
-            return Iterator(end());
-        }
-
-        Node* newNode = new Node(value);
-        newNode->next = position.current->next;
-        position.current->next = newNode;
-        ++size;
-
-        return Iterator(newNode);
-    }
-
-    // Erase an element at a specific position
-    Iterator erase(Iterator position) {
-        if (position.current == nullptr || position.current->next == nullptr) {
-            throw std::out_of_range("Invalid iterator position");
-        }
-
-        Node* erasedNode = position.current->next;
-        position.current->next = erasedNode->next;
-        delete erasedNode;
-        --size;
-
-        return Iterator(position.current->next);
-    }
-}
 
 // Insert an element at a specific index
 template <typename T>
@@ -254,20 +182,13 @@ void Vector<T>::erase(size_t index) {
     --size;
 }
 
-// Cast vector elements to another type
-    template <typename U>
-    Vector<U> cast_to() const {
-        Vector<U> result;
-        Node* current = data;
-        while (current != nullptr) {
-            result.push_back(static_cast<U>(current->data));
-            current = current->next;
-        }
-        return result;
-    }
 
 
-};
+
+
+
+
+
 
 
 

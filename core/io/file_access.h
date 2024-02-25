@@ -34,7 +34,6 @@ SOFTWARE.
 
 
 #include "core/string/ustring.h" // for String class
-#include "core/templates/vector.h" // for Vector<T> class 
 #include "core/object/ref_counted.h" // for RefCounted class
 #include "core/error/error_list.h" // for Error enum 
 #include "core/object/m_object.h" // for CLASS() macro to registeration class 
@@ -42,7 +41,7 @@ SOFTWARE.
 
 /**
  * @class FileAccess
- * @brief This simple FileAccess class 
+ * @brief FileAccess class 
  * provides basic functionality for opening, writing to, and reading from a file. 
  * The constructor takes a filename, and the member functions handle file operations.
  * 
@@ -50,13 +49,6 @@ SOFTWARE.
 
 class FileAccess : public RefCounted {
 	CLASS(FileAccess , RefCounted);	
-
-private:
-    std::string filename;
-    std::fstream file;
-    ModeFlags mode;
-    std::string lastError;
-
 
 public:
 	enum ModeFlags {
@@ -75,47 +67,47 @@ public:
 	 * open the file
 	 * check if file is open !! 
 	 */
-	bool open(const std::string& path, ModeFlags mode);
+	bool open(const String& path, ModeFlags mode);
 	bool is_open() const;
 	
 	bool file_exists(const String& path) const;
 	bool write(const String& data);
 
-	bool open_compressed(const std::string& path, ModeFlags mode);
-	bool open_encrypted(const std::string& path, ModeFlags mode);
+	bool open_compressed(const String& path, ModeFlags mode);
+	bool open_encrypted(const String& path, ModeFlags mode);
 
-	bool write_line_to_file(const std::string& line);
-	bool write_pascal_string_to_file(const std::string& pascalString);
+	bool write_line_to_file(const String& line);
+	bool write_pascal_string_to_file(const String& p_pascal);
  
 	bool write_var_to_file(const void* variable, size_t size);
   bool write_16_to_file(uint16_t value);
   
-	bool read(std::string& data);
-  bool get_line_from_file(std::string& line);
+	bool read(const String& data);
+  	bool get_line_from_file(const String& line);
     
-	bool store_string(const std::string& data);
-  bool get_var_from_file(void* variable, size_t size);
+	bool store_string(const String& data);
+  	bool get_var_from_file(void* variable, size_t size);
   
 	bool get_hidden_attribute();
 
 	uint16_t get16();
   
-	std::string get_file_path() const;
-  std::string get_open_error() const;
+	String get_file_path() const;
+  	String get_open_error() const;
   
-	std::vector<uint8_t> get_file_as_Bytes() const; 
-	std::string get_error() const;
+	Vector<uint8_t> get_file_as_Bytes() const; 
+	String get_error() const;
   
-	std::vector<std::string> get_csv_Line(char delimiter = ',');
+	Vector<String> get_csv_Line(char delimiter = ',');
   
 	void close();
-  void flush();
+  	void flush();
   
 	bool get8(uint8_t& value);
-  uint16_t get16();
+  	uint16_t get16();
   
-	std::string get_as_text();
-	std::string get_file_as_string();
+	String get_as_text();
+	String get_file_as_string();
 
 	std::function<void()> get_create_func();
 
@@ -153,7 +145,12 @@ protected:
 	static void _bind_methods() {} 
 
 
-
+private:
+    String filename;
+    std::fstream file;
+    ModeFlags mode;
+    String lastError;
+    
 
 };
 

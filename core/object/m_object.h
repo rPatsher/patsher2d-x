@@ -27,81 +27,81 @@ SOFTWARE.
 #define M_OBJECT_H
 
 class Callable;
+class Dictionary;
 
 #include "core/templates/map.h"
+#include "core/templates/list.h"
 #include "core/object/callback_func.h"
 #include "core/templates/vector.h"
 #include "core/templates/hash_map.h"
+#include "core/templates/hash_set.h"
 #include "core/variant/signals.h"
 
-
-
-#include <map>
-#include <string>
-#include <vector>
+#include <algorithm> 
 #include <functional>
-#include <algorithm> // for std::max_element and std::min_element
 #include <memory>
 
+
+
 struct PropertyInfo {
-    std::map<std::string, std::string> attributes;
-    std::vector<std::string> amenities;
+    Map<String, String> attributes;
+    Vector<String> amenities;
     double price;
     
     PropertyInfo();
     ~PropertyInfo();
 
-    PropertyInfo(const std::map<std::string, std::string>& attributes,
-                 const std::vector<std::string>& amenities,
+    PropertyInfo(const Map<String, String>& attributes,
+                 const Vector <String>& amenities,
                  double price);
 
     // Getter for attributes
-    std::string get(const std::string& key) const;
+    String get(const String& key) const;
 
     // Setter for attributes
-    void set(const std::string& key, const std::string& value);
+    void set(const String& key, const String& value);
 
     // Find function for amenities
-    bool find(const std::string& amenity) const;
+    bool find(const String& amenity) const;
 
     // End function for amenities (returns an iterator to the end)
-    std::vector<std::string>::const_iterator end() const;
+    Vector<String>::const_iterator end() const;
     
-    std::vector<PropertyInfo> get_property_list();
+    Vector<PropertyInfo> get_property_list();
    
-    void insert(const std::string& amenity);
+    void insert(const String& amenity);
 
     // Function to erase an amenity
-    void erase(const std::string& amenity);
+    void erase(const String& amenity);
 
 
-    PropertyInfo::PropertyInfo(const std::map<std::string, std::string>& attributes,
-                           const std::vector<std::string>& amenities,
+    PropertyInfo::PropertyInfo(const Map<String, String>& attributes,
+                           const Vector <String>& amenities,
                            double price)
     : attributes(attributes), amenities(amenities), price(price) {}
 
-std::string PropertyInfo::get(const std::string& key) const {
+String PropertyInfo::get(const String& key) const {
     auto it = attributes.find(key);
     return (it != attributes.end()) ? it->second : "";
 }
 
-void PropertyInfo::set(const std::string& key, const std::string& value) {
+void PropertyInfo::set(const String& key, const String& value) {
     attributes[key] = value;
 }
 
-bool PropertyInfo::find(const std::string& amenity) const {
+bool PropertyInfo::find(const String& amenity) const {
     return std::find(amenities.begin(), amenities.end(), amenity) != amenities.end();
 }
 
-std::vector<std::string>::const_iterator PropertyInfo::end() const {
+Vector<String>::const_iterator PropertyInfo::end() const {
     return amenities.end();
 }
 
-void PropertyInfo::insert(const std::string& amenity) {
+void PropertyInfo::insert(const String& amenity) {
     amenities.push_back(amenity);
 }
 
-void PropertyInfo::erase(const std::string& amenity) {
+void PropertyInfo::erase(const String& amenity) {
     auto it = std::find(amenities.begin(), amenities.end(), amenity);
     if (it != amenities.end()) {
         amenities.erase(it);
@@ -111,17 +111,31 @@ void PropertyInfo::erase(const std::string& amenity) {
 
 };
 
-
+struct MethodInfo {
+	String name;
+	PropertyInfo return_val;
+	uint32_t flags = METHOD_FLAGS_DEFAULT;
+	int id = 0;
+	List<PropertyInfo> arguments;
+	Vector<Variant> default_arguments;
+	int return_val_metadata = 0;
+	Vector<int> arguments_metadata;
+};
 
 
 #define CLASS(class_name, base_class_name)                                      \
+private:																				\
+		void operator=(const class_name &p_rval) {}									\
+		friend class ::Class;								 						\
+public:																				\
+	typedef m_class self_type; 														\
 public:                                                                            \
     static const char* get_class_name_static() { return #class_name; }              \
     virtual const char* get_class_name() const { return get_class_name_static(); } \
     static Object* get_class_ptr_static() { return _create(); }                   \
     static Object* get_class_static() { return _create(); }                       \
-    static const std::vector<std::string>& get_inheritance_list_static() {           \
-        static std::vector<std::string> inheritance_list = { #base_class_name };     \
+    static const Vector<String>& get_inheritance_list_static() {           \
+        static Vector<String> inheritance_list = { #base_class_name };     \
         return inheritance_list;                                                   \
     }                                                                               \
     static bool is_class(const char* class_name) {                                  \
@@ -130,8 +144,8 @@ public:                                                                         
     static bool is_class_ptr(const Object* obj) {                                 \
         return dynamic_cast<const class_name*>(obj) != nullptr;                     \
     }                                                                               \
-    static const std::vector<std::string>& get_valid_parents_static() {             \
-        static std::vector<std::string> valid_parents = { #base_class_name };        \
+    static const Vector<String>& get_valid_parents_static() {             \
+        static Vector<String> valid_parents = { #base_class_name };        \
         return valid_parents;                                                        \
     }                                                                               \
     static return_type get_set(return_type value) {                                \
@@ -164,159 +178,93 @@ public:                                                                         
 
 class Object {
 public:
-    Object();  // Constructor
-    ~Object(); // Destructor
-
-    // Const versions of get and set functions
-    int get(const std::string& key) const;
-    void set(const std::string& key, int value) const;
-
-    // Additional member functions
-    std::string get_property(const std::string& key) const;
-    std::vector<std::string> get_property_array(const std::string& key) const;
-    template <typename Callable> decltype(auto) get_property_call(const std::string& key, Callable&& func) const;
-
-    // Get and set properties with a single function call
-    std::string getset(const std::string& key, const std::string& value = "");
-    void setget(const std::string& key, const std::string& value);
-
-
-    // Additional functions
-    std::string get_class_name() const;
-    std::map<std::string, std::string> get_from_property_map() const;
-
-    // New functions
-    void get_obj_insert(const std::string& objKey, const Object& objToInsert);
-    std::map<std::string, Object> get_obj_map(const std::string& objKey) const;
-
-    // String manipulation functions
-    size_t find(const std::string& substring) const;
-    size_t rfind(const std::string& substring) const;
-
-    // Null and validity checks
+    Object(); 
+    ~Object(); 
+    int get(const String& key) const;
+    void set(const String& key, int value) const;
+    String get_property(const String& key) const;
+    Vector<String> get_property_array(const String& key) const;
+    template <typename Callable> decltype(auto) get_property_call(const String& key, Callable&& func) const;
+    String getset(const String& key, const String& value = "");
+    void setget(const String& key, const String& value);
+    String get_class_name() const;
+    Map<String, String> get_from_property_map() const;
+    void get_obj_insert(const String& objKey, const Object& objToInsert);
+    Map<String, Object> get_obj_map(const String& objKey) const;
+    size_t find(const String& substring) const;
+    size_t rfind(const String& substring) const;
     bool is_null() const;
     bool is_valid() const;
-
-    // Type casting functions
     template <typename T>
-    T cast_to(const std::string& key) const;
-
-   // New function for connecting signals
+    T cast_to(const String& key) const;
     template <typename... Args>
-    void connect(const std::string& key, Signal<Args...>& signal, const typename Signal<Args...>::Slot& slot) {
+    void connect(const String& key, Signal<Args...>& signal, const typename Signal<Args...>::Slot& slot) {
         signal.connect(key, this, slot);
     }
-
-    // New function for disconnecting signals
     template <typename... Args>
-    void disconnect(const std::string& key, Signal<Args...>& signal) {
+    void disconnect(const String& key, Signal<Args...>& signal) {
         signal.disconnect(key, this);
     }
-
-    // New function for instantiating objects dynamically
     template <typename T, typename... Args>
     static T* instantiate(Args&&... args) {
         return new T(std::forward<Args>(args)...);
     }
-
-    void* allocate_memory(size_t size);    // Allocate dynamic memory
-    void deallocate_memory(void* ptr);      // Deallocate dynamic memory
-    void copy_data_from(const Object& other);  // Copy data from another Object
-
-
+    void* allocate_memory(size_t size);   
+    void deallocate_memory(void* ptr);   
+    void copy_data_from(const Object& other);
     template <typename T>
     T static_cast_from(const Object& obj);
-
-    // New function for static memory information
     static size_t get_static_memory();
-
-    // New functions for variables and static pointers
-    int get_var(const std::string& varName) const;
-    void set_var(const std::string& varName, int value) const;
-    
-    int get_obj_max_property(const std::string& objKey, const std::string& propertyKey) const;
-
-    // New function to get the minimum property value in the object map
-    int get_obj_min_property(const std::string& objKey, const std::string& propertyKey) const;
-
+    int get_var(const String& varName) const;
+    void set_var(const String& varName, int value) const;
+    int get_obj_max_property(const String& objKey, const String& propertyKey) const;
+    int get_obj_min_property(const String& objKey, const String& propertyKey) const;
     static Object* get_static_ptr();
     static void set_static_ptr(Object* ptr);
-
-    // New functions for v
     int getv() const;
     void setv(int value) const;
-    std::vector<std::string> get_property_listv() const;
-
-    // New functions for indexed bindings
+    Vector<String> get_property_listv() const;
     int get_indexed_bind(size_t index) const;
     void set_indexed_bind(size_t index, int value) const;
-
-    // New functions
-    void call_bind(const std::string& method_name) const;
-    void initialize_classv(const std::vector<std::string>& properties);
-
-    // New function for checking if a property can revert
-    bool property_can_revert(const std::string& key) const;
-
-    // New function for getting the revert value of a property
-    int property_get_revert(const std::string& key) const;
-   
-    void zero_fill_memory(size_t size);      // Fill dynamic memory with zeros
-    void set_memory_value(size_t offset, int value);  // Set a value at a specific offset in dynamic memory
+    void call_bind(const String& method_name) const;
+    void initialize_classv(const Vector <String>& properties);
+    bool property_can_revert(const String& key) const;
+    int property_get_revert(const String& key) const;
+    void zero_fill_memory(size_t size);
+    void set_memory_value(size_t offset, int value);
+    int get_memory_value(size_t offset) const; 
     
-    
-    // Method binding functions
-    template <typename Func>
-    decltype(auto) bind_method(const std::string& method_name, Func&& func);
+    template <class T>
+	static T *cast_to(Object *p_object) {
+		return dynamic_cast<T *>(p_object);
+	}
 
-    template <typename ReturnType, typename... Args>
-    decltype(auto) get_method(const std::string& method_name) const;
+	template <class T>
+	static const T *cast_to(const Object *p_object) {
+		return dynamic_cast<const T *>(p_object);
+	}
     
-    
-    int get_memory_value(size_t offset) const; // Get a value from a specific offset in dynamic memory
+    static void get_inheritance_list_static(List<String> *p_inheritance_list) { p_inheritance_list->push_back("Object"); }
+
+	static String get_class_static() { return "Object"; }
+	static String get_parent_class_static() { return String(); }
+	
 
 protected:
     friend class RefCounted;
-    friend class MClass;
-    friend class ClassDB;
-    friend class ObjectDB;
-    friend class Extension;
+    friend class Class;
 
 private:
-    mutable std::map<std::string, int> dataMap; // Mutable to allow modification in const functions
-    std::map<std::string, std::string> propertyMap;
-    std::map<std::string, std::vector<std::string>> propertyArrayMap;
-    std::map<std::string, std::function<int(const Object&)>> methodBindings;
-
-    // New member variables for object insertion
-    std::map<std::string, Object> objectMap;
-   // Unique pointer to dynamically allocated memory
+	Map<String, int> dataMap;
+    Map<String, String> propertyMap;
+    Map<String, Vector<String>> propertyArrayMap;
+    Map<String, std::function<int(const Object&)>> methodBindings;
+    Map<String, Object> objectMap;
     std::unique_ptr<char[]> dynamicMemory;
-
-    // New member variable for variables
-    mutable std::map<std::string, int> variableMap;
-
-    // New static pointer
+    Map<String, int> variableMap;
     static Object* staticPointer;
 };
-// Template implementation for get_method, bind_method, and emit_signal
-template <typename ReturnType, typename... Args>
-decltype(auto) Object::get_method(const std::string& method_name) const {
-    auto it = methodBindings.find(method_name);
-    if (it != methodBindings.end()) {
-        return it->second;
-    } else {
-        // Default return if the method is not found
-        return [](const Object
-        &) -> ReturnType { return ReturnType(); };
-    }
-    
-}
 
-template <typename Func>
-decltype(auto) Object::bind_method(const std::string& method_name, Func&& func) {
-    methodBindings[method_name] = std::forward<Func>(func);
-}
 
 
 

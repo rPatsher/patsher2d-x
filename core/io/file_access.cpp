@@ -7,6 +7,10 @@
 #include <chrono>
 
 
+#include "core/error/error_list.h"
+#include "core/variant/variant.h"
+
+
 
 FileAccess::FileAccess() {}
 
@@ -17,7 +21,7 @@ FileAccess::~FileAccess() {
 }
 
 
-bool FileAccess::open(const std::string& path, ModeFlags mode) {
+bool FileAccess::open(const String& path, ModeFlags mode) {
     std::ios_base::openmode fileMode = std::ios::out | std::ios::in;
 
     switch (mode) {
@@ -42,11 +46,10 @@ bool FileAccess::open(const std::string& path, ModeFlags mode) {
     file.open(filename, fileMode);
 
     if (!file.is_open()) {
-        lastError = "Error opening file: " + filename;
+        ERR_PRINT("Error opening file\n" ,filename);
         return false;
     }
-
-    mode = mode;  // Update the mode member variable
+    mode = mode; 
 
     return true;
 
@@ -60,18 +63,18 @@ bool FileAccess::is_open() const {
 }
 
 
-bool FileAccess::file_exists(const std::string& path) const {
+bool FileAccess::file_exists(const String& path) const {
     return std::filesystem::exists(path);
 
 }
 
-bool FileAccess::write(const std::string& data) const {
+bool FileAccess::write(const String& data) const {
     if (file.is_open()) {
         file << data;
         return true;
     }
 
-    lastError = "Error writing to file: " + filename;
+    ERR_PRINT("Error writing to file\n",filename);
     return false;
 }
 
@@ -81,11 +84,11 @@ bool FileAccess::store_float(float value) {
         return true;
     }
 
-    lastError = "Error storing float to file: " + filename;
+    ERR_PRINT("Error storing float to file: ", filename);
     return false;
 }
 
-bool FileAccess::store_pascal_string(const std::string& pascalString) {
+bool FileAccess::store_pascal_string(const String& pascalString) {
     if (file.is_open()) {
         size_t length = pascalString.length();
         file.write(reinterpret_cast<const char*>(&length), sizeof(size_t));
@@ -128,7 +131,7 @@ bool FileAccess::write_16_To_file(uint16_t value) {
     return false;
 }
 
-bool FileAccess::read(std::string& data) {
+bool FileAccess::read(String& data) {
     if (file.is_open()) {
         file.seekg(0, std::ios::beg);
 
@@ -144,34 +147,30 @@ bool FileAccess::read(std::string& data) {
     return false;
 }
 
-bool FileAccess::get_line_from_file(std::string& line) {
+bool FileAccess::get_line_from_file(String& line) {
     if (file.is_open()) {
         std::getline(file, line);
         return true;
     }
-
     lastError = "Error getting line from file: " + filename;
     return false;
 }
 
-bool FileAccess::store_string(const std::string& data) {
+bool FileAccess::store_string(const String& data) {
     if (file.is_open()) {
         file << data << std::endl;
         return true;
     }
-
-    lastError = "Error storing string to file: " + filename;
+    ERR_PRINT("Error storing string to file", filename);
     return false;
 }
 
 bool FileAccess::get_var_from_file(void* variable, size_t size) {
     if (file.is_open()) {
-        // Add logic to read a variable from the file
         file.read(reinterpret_cast<char*>(variable), size);
         return true;
     }
-
-    lastError = "Error getting variable from file: " + filename;
+    ERR_PRINT("Error getting variable from file ", filename);
     return false;
 }
 
@@ -187,11 +186,11 @@ uint16_t FileAccess::get16() {
     return value;
 }
 
-std::string FileAccess::get_file_path() const {
+String FileAccess::get_file_path() const {
     return filename;
 }
 
-std::string FileAccess::get_open_error() const {
+String FileAccess::get_open_error() const {
     return lastError;
 }
 
@@ -217,8 +216,8 @@ bool FileAccess::get8(uint8_t& value) {
     return false;
 }
 
-std::vector<uint8_t> FileAccess::get_file_as_bytes() const {
-    std::vector<uint8_t> bytes;
+Vector<uint8_t> FileAccess::get_file_as_bytes() const {
+    Vector<uint8_t> bytes;
 
     if (file.is_open()) {
         file.seekg(0, std::ios::end);
@@ -235,17 +234,17 @@ std::vector<uint8_t> FileAccess::get_file_as_bytes() const {
     return bytes;  // Return an empty vector if there was an error
 }
 
-std::string FileAccess::get_error() const {
+String FileAccess::get_error() const {
     return lastError;
 }
 
-std::vector<std::string> FileAccess::get_csv_Line(char delimiter) {
-    std::vector<std::string> fields;
-    std::string line;
+Vector<String> FileAccess::get_csv_Line(char delimiter) {
+    Vector<String> fields;
+    String line;
 
     if (file.is_open() && std::getline(file, line)) {
         std::istringstream stream(line);
-        std::string field;
+        String field;
 
         while (std::getline(stream, field, delimiter)) {
             fields.push_back(field);
@@ -261,14 +260,14 @@ uint16_t FileAccess::get16() {
     if (file.is_open()) {
         file.read(reinterpret_cast<char*>(&value), sizeof(uint16_t));
     } else {
-        lastError = "Error getting 16-bit integer from file: " + filename;
+        ERR_PRINT("Error getting 16-bit integer from file\n" , filename);
     }
 
     return value;
 }
 
-std::string FileAccess::get_as_text() {
-    std::string content;
+String FileAccess::get_as_text() {
+    String content;
 
     if (file.is_open()) {
         file.seekg(0, std::ios::end);
@@ -281,7 +280,7 @@ std::string FileAccess::get_as_text() {
             return content;
     }
 
-    lastError = "Error getting file content as text: " + filename;
+    ERR_PRINT("Error getting file content as text\n" , filename);
     return content;  // Return an empty string if there was an error
 }
 
@@ -340,4 +339,12 @@ bool FileAccess::set_modified_time(const std::chrono::system_clock::time_point& 
     }
 
     return false;
+}
+
+
+void FileAccess::_bind_methods() {
+	Class::bind_method("open" , &FileAccess::open);
+	Class::bind_method("close", & FileAccess::close);
+	Class::bind_method("store_string", & FileAccess::store_string);
+	
 }

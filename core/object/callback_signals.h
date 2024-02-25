@@ -1,7 +1,7 @@
 /*
  * callback_signals.h
  * 
- * Copyright 2024 root <root@localhost>
+ * Copyright 2024 Patsher
  * 
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -51,6 +51,7 @@ class CallBackSignals
 		virtual ~CallBackSignals();
 	
 	private:
+		//
 		
 };
 
