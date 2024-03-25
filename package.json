@@ -1,10 +1,23 @@
 {
   "name": "patsher2d-x",
-  "version": "2.4.2",
+  "version": "1.0.0",
   "description": "a simple game engine development multi platform 2d and 3d with editor",
-  "main": "main.js",
+  "icon": "icon.png",
+  "permission": [
+    "android.permission.INTERNET",
+    "android.permission.WRITE_EXTERNAL_STORAGE",
+    "android.permission.READ_EXTERNAL_STORAGE"
+  ],
+  "main": "index.js",
+  "authors": [
+    "ATHORS.txt"
+  ],
+  "module": "index.js",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
-    "test": "nu"
+    "test": "null"
   },
   "repository": {
     "type": "git",
@@ -23,5 +36,10 @@
   "bugs": {
     "url": "https://github.com/rPatsher/patsher2d-x/issues"
   },
-  "homepage": "https://github.com/rPatsher/patsher2d-x#readme"
+  "homepage": "https://github.com/rPatsher/patsher2d-x#readme",
+  "dependencies": {
+    "node-addon-api": "^8.0.0",
+    "raylib": "^0.14.0",
+    "typescript": "^5.4.3"
+  }
 }

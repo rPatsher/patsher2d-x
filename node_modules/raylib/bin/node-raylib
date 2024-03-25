@@ -1,0 +1,71 @@
+#!/usr/bin/env node
+
+// sometimes eval is not evil...
+/* eslint no-eval: 0 */
+
+const fs = require('fs')
+const path = require('path')
+const raylib = require('..')
+const pkg = require('../package.json')
+
+const usage = `
+  Node.js bindings for raylib.
+    Usage
+      $ node-raylib [file]
+
+    Examples
+      $ node-raylib - runs data/index.js or index.js
+      $ node-raylib core_basic_window.js
+`
+
+// find best file for enry-point
+let filename = process.argv[2]
+
+if (filename === '--help') {
+  console.error(usage)
+  process.exit(1)
+}
+
+if (filename === '--version') {
+  console.log(pkg.version)
+  process.exit(0)
+}
+
+if (!filename) {
+  const f1 = path.join(process.cwd(), 'data', 'index.js')
+  const f2 = path.join(process.cwd(), 'index.js')
+  if (raylib.FileExists(f1)) {
+    filename = f1
+  } else if (raylib.FileExists(f2)) {
+    filename = f2
+  }
+  else {
+    console.error(usage)
+    process.exit(0)
+  }
+}
+
+if (!raylib.FileExists(filename)) {
+  console.error('Provided file does not exist.')
+  console.error(usage)
+  process.exit(1)
+}
+
+// Add a "raylib" module alias for when it's not found.
+const moduleAlias = require('module-alias')
+moduleAlias.addAlias('raylib', path.join(__dirname, '..'))
+
+// Retrieve the context of the file.
+const realpath = fs.realpathSync(filename)
+
+// Switch to the file's directory so that file loading works.
+process.chdir(path.dirname(realpath))
+
+// Inject raylib as a global variable.
+global.raylib = raylib
+
+// Load up the module's path.
+require(realpath)
+
+// load the file, but don't require it (so you can use this file in an exe bundler)
+eval(fs.readFileSync(realpath))
