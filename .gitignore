@@ -1,0 +1,25 @@
+# Common ignores
+*.log
+*.tmp
+*.pyc
+__pycache__/
+*.swp
+*.swo
+*.out
+
+# IDE or OS specific (adjust as needed)
+.DS_Store
+Thumbs.db
+
+# Specific to your project (add or remove as needed)
+*.py           # Ignore all Python files
+*.js           # Ignore all JavaScript files
+*.sh           # Ignore all shell scripts
+
+# Database files (if applicable)
+*.sql
+*.db
+
+# Virtual environment (if applicable)
+.env          # Specific environment variables
+venv/          # Python virtual environment
